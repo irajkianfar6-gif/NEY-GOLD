@@ -1,0 +1,1615 @@
+<!doctype html>
+<html lang="fa">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>NEY | طلا و جواهر</title>
+<meta name="description" content="NEY — طلا و جواهر دست‌ساز؛ انگشتر، گردنبند، دستبند و گوشواره طلا.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* NEY brand palette */
+  --brand-orange:#E67724; --brand-orange-light:#F6C9A0; --brand-orange-deep:#B5541A;
+  --brand-cream:#F3E6C8; --brand-indigo:#152B46; --brand-slate:#3B6C94; --brand-sepia:#1C130D;
+
+  color-scheme: light;
+  --t: 1300ms;
+  --ease: cubic-bezier(0.65,0,0.35,1);
+  --out: cubic-bezier(0.16,1,0.3,1);
+  --sine: cubic-bezier(0.37,0,0.63,1);
+
+  --c-sky:#F6D5B0; --c-star:#FFF6E6;
+  --c-sun:#E67724; --c-sunray:#EE8A35; --c-sunin:#F1A866;
+  --c-moon:#F3E6C8; --c-crater:#E2CFA8;
+  --c-string:#6B5443; --c-cloud:#FAF3E4;
+  --c-far:#F1A866; --c-hill:#E67724;
+  --c-wall:#F3E6C8; --c-roof:#8A3F14; --c-door:#152B46; --c-win:#F1A866;
+  --c-fpine:#3B6C94; --c-meadow:#CC6420; --c-river:#3B6C94; --c-ripple:#F3E6C8;
+  --c-npine:#152B46; --c-ground:#B5541A; --c-fern:#1F3A5A; --c-stem:#152B46;
+  --c-bellA:#EE8A35; --c-bellB:#F6C9A0;
+  --c-cap:#E67724; --c-mstem:#F3E6C8; --c-spot:#FAF3E4;
+  --c-fb:#CC6420; --c-fc:#F3E6C8; --c-fd:#152B46;
+  --c-grassA:#1F3A5A; --c-grassB:#152B46; --c-seed:#EE8A35;
+  --c-la:#E67724; --c-lb:#B5541A; --c-lc:#F1A866; --c-vein:#8A3F14;
+  --shadow:rgba(28,19,13,.34); --edge:rgba(255,248,236,.55);
+  --tag:#FAF3E4; --ink:#1C130D; --ink2:#6B5443; --thread:#6B5443;
+  --groove:#EAD9B8; --ring:#E67724; --gold:#B5541A; --perf:#D9C29C;
+  --grainO:.6;
+  --b-rim:#1C130D; --b-a:#E67724; --b-b:#152B46; --b-sp:#F3E6C8;
+  --j-g1:#d6a63d; --j-g2:#f3d681; --j-g3:#9a6b22; --j-ru:#a82539; --j-ru2:#d4495c;
+  --j-em:#1f7a63; --j-em2:#58b597; --j-di:#eef4f2; --j-di2:#c4d6d3; --j-di3:#ffffff;
+  --j-pe:#f6eedc; --j-pe2:#dccfb3; --j-glint:#fffaf0;
+}
+.night{
+  --c-sky:#0E1D31; --c-star:#F6C9A0;
+  --c-moon:#F6C9A0; --c-crater:#E8A56E;
+  --c-string:#3B6C94; --c-cloud:#1F3A5A;
+  --c-far:#1F3A5A; --c-hill:#172F4C;
+  --c-wall:#2B4A6C; --c-roof:#0E1D31; --c-door:#0A1626; --c-win:#EE8A35;
+  --c-fpine:#152B46; --c-meadow:#12263F; --c-river:#2B4A6C; --c-ripple:#F1A866;
+  --c-npine:#0A1626; --c-ground:#13253C; --c-fern:#0E1D31; --c-stem:#0E1D31;
+  --c-bellA:#CC6420; --c-bellB:#8A3F14;
+  --c-cap:#B5541A; --c-mstem:#3B6C94; --c-spot:#F6C9A0;
+  --c-fb:#CC6420; --c-fc:#3B6C94; --c-fd:#0A1626;
+  --c-grassA:#0E1D31; --c-grassB:#0A1626; --c-seed:#B5541A;
+  --c-la:#8A3F14; --c-lb:#2B4A6C; --c-lc:#B5541A; --c-vein:#0E1D31;
+  --shadow:rgba(4,10,20,.62); --edge:rgba(246,201,160,.18);
+  --tag:#F3E6C8; --ink:#152B46; --ink2:#3B6C94; --thread:#3B6C94;
+  --groove:#DCCBA8; --ring:#E67724; --gold:#CC6420; --perf:#B8A888;
+  --grainO:.42;
+  --b-rim:#0A1626; --b-a:#EE8A35; --b-b:#3B6C94; --b-sp:#F3E6C8;
+  --j-g1:#c9a55e; --j-g2:#eedba0; --j-g3:#7d6233; --j-ru:#93304f; --j-ru2:#c45577;
+  --j-em:#2a6f73; --j-em2:#6ab3ac; --j-di:#e3e5f8; --j-di2:#a9afd9; --j-di3:#ffffff;
+  --j-pe:#e6e0f2; --j-pe2:#b5afd0; --j-glint:#fff6dc;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden}
+body{
+  background:var(--c-sky);
+  transition: background-color var(--t) var(--ease);
+  font-family:"Vazirmatn", Tahoma, sans-serif;
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  -webkit-tap-highlight-color:transparent;
+}
+#stage{position:fixed;inset:0;overflow:hidden;touch-action:none;user-select:none;-webkit-user-select:none}
+.layer{position:absolute;will-change:transform;pointer-events:none}
+.layer svg{display:block;overflow:visible;transition:filter var(--t) var(--ease) var(--d)}
+.layer path,.layer rect{transition:fill var(--t) var(--ease) var(--d)}
+.layer > svg{animation:rise 1200ms var(--out) both;animation-delay:calc(var(--i) * 75ms + 80ms)}
+.settled .layer > svg{animation:none}
+@keyframes rise{from{opacity:0;transform:translate3d(0,26px,0)}}
+@keyframes fadein{from{opacity:0}}
+
+/* paper fills */
+.sky{fill:var(--c-sky)} .star{fill:var(--c-star)}
+.sun{fill:var(--c-sun)} .sunray{fill:var(--c-sunray)} .sunin{fill:var(--c-sunin)}
+.moon{fill:var(--c-moon)} .crater{fill:var(--c-crater)}
+.string{stroke:var(--c-string);stroke-width:1;fill:none;transition:stroke var(--t) var(--ease) var(--d)}
+.cloud{fill:var(--c-cloud)} .far{fill:var(--c-far)} .hill{fill:var(--c-hill)}
+.wall{fill:var(--c-wall)} .roof{fill:var(--c-roof)} .door{fill:var(--c-door)}
+.win{fill:var(--c-win)}
+.layer .win{transition-delay:calc(var(--d) + var(--w,0ms))}
+.fpine{fill:var(--c-fpine)} .meadow{fill:var(--c-meadow)} .river{fill:var(--c-river)} .ripple{fill:var(--c-ripple)}
+.npine{fill:var(--c-npine)} .ground{fill:var(--c-ground)} .fern{fill:var(--c-fern)} .stem{fill:var(--c-stem)}
+.bellA{fill:var(--c-bellA)} .bellB{fill:var(--c-bellB)}
+.cap{fill:var(--c-cap)} .mstem{fill:var(--c-mstem)} .spot{fill:var(--c-spot)}
+.fb{fill:var(--c-fb)} .fc{fill:var(--c-fc)} .fd{fill:var(--c-fd)}
+.grassA{fill:var(--c-grassA)} .grassB,.sstem{fill:var(--c-grassB)} .seed{fill:var(--c-seed)}
+.la{fill:var(--c-la)} .lb{fill:var(--c-lb)} .lc{fill:var(--c-lc)} .vein{fill:var(--c-vein)}
+.layer .g{fill:url(#grain);opacity:var(--grainO);transition:opacity var(--t) var(--ease) var(--d)}
+
+.stars{opacity:0;transition:opacity 1600ms var(--ease) calc(var(--d) + 500ms)}
+.night .stars{opacity:1}
+.night .star{animation:twinkle 4s var(--sine) infinite alternate}
+@keyframes twinkle{from{opacity:.25}to{opacity:1}}
+
+.glow{opacity:0;transition:opacity 1400ms var(--ease) calc(var(--d) + 700ms + var(--w,0ms))}
+.night .glow{opacity:1}
+
+/* hanging sun & moon */
+.hang-c{position:absolute;top:0;animation:fadein 1400ms var(--out) both 200ms;
+  transition:transform 1800ms var(--ease) calc(var(--d) + 600ms)}
+.hang-c svg{transform-origin:50% 0;animation:swing 7s var(--sine) infinite alternate}
+.sunH{transform:translate3d(0,0,0)}
+.night .sunH{transform:translate3d(0,var(--up),0);transition-delay:var(--d)}
+.moonH{transform:translate3d(0,var(--up),0);transition-delay:var(--d)}
+.night .moonH{transform:translate3d(0,0,0);transition-delay:calc(var(--d) + 600ms)}
+.mglow{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(246,201,160,.34),rgba(246,201,160,0) 68%);pointer-events:none}
+.hit{pointer-events:auto;cursor:pointer}
+@keyframes swing{from{transform:rotate(-1.4deg)}to{transform:rotate(1.4deg)}}
+
+/* butterfly */
+.bfly{position:fixed;left:0;top:0;z-index:26;border:0;background:none;padding:0;cursor:pointer;will-change:transform;
+  touch-action:manipulation;animation:fadein 900ms var(--out) both 900ms;-webkit-tap-highlight-color:transparent}
+.bfly svg{width:100%;height:100%;display:block;overflow:visible;
+  filter:drop-shadow(0 -1px 0 var(--edge)) drop-shadow(2px 7px 5px var(--shadow));transition:filter var(--t) var(--ease)}
+.night .bfly svg{filter:drop-shadow(0 0 7px rgba(238,138,53,.55)) drop-shadow(2px 7px 5px var(--shadow))}
+.bfly:focus-visible{outline:2px dashed var(--c-fc);outline-offset:4px;border-radius:50%}
+.bfly path{transition:fill var(--t) var(--ease)}
+.brim,.bbody{fill:var(--b-rim)} .bwa{fill:var(--b-a)} .bwb{fill:var(--b-b)} .bsp{fill:var(--b-sp)}
+.bant{fill:none;stroke:var(--b-rim);stroke-width:1.1;stroke-linecap:round;transition:stroke var(--t) var(--ease)}
+.bfly .g{fill:url(#grain);opacity:var(--grainO)}
+
+/* hanging jewelry */
+#jewels{position:fixed;inset:0;pointer-events:none;z-index:18}
+.jw{position:absolute;top:0;transform-origin:50% 0;will-change:transform;
+  filter:drop-shadow(0 -1px 0 var(--edge)) drop-shadow(2px 9px 7px var(--shadow));transition:filter var(--t) var(--ease)}
+.jw.open{z-index:3}
+.jw-drop{position:relative;display:flex;flex-direction:column;align-items:center;
+  animation:drop 1600ms var(--out) both;animation-delay:calc(1000ms + var(--di) * 220ms)}
+.jthread{display:block;width:1px;background:var(--thread);transition:background-color var(--t) var(--ease)}
+.jgem{display:block;border:0;background:none;padding:0;cursor:grab;pointer-events:auto;touch-action:none;
+  -webkit-tap-highlight-color:transparent}
+.jgem:active{cursor:grabbing}
+.jgem:focus-visible{outline:2px dashed var(--ink2);outline-offset:4px;border-radius:8px}
+.jgem svg{width:100%;height:100%;display:block;overflow:visible;transform-origin:50% 50%}
+.jw path{fill-rule:evenodd;transition:fill var(--t) var(--ease)}
+.jw .g{fill:url(#grain);opacity:var(--grainO)}
+.jg1{fill:var(--j-g1)} .jg2{fill:var(--j-g2)} .jg3{fill:var(--j-g3)}
+.jru{fill:var(--j-ru)} .jru2{fill:var(--j-ru2)} .jem{fill:var(--j-em)} .jem2{fill:var(--j-em2)}
+.jdi{fill:var(--j-di)} .jdi2{fill:var(--j-di2)} .jdi3{fill:var(--j-di3)}
+.jpe{fill:var(--j-pe)} .jpe2{fill:var(--j-pe2)} .jhi{fill:#fffdf4}
+.jkn{fill:none;stroke:var(--thread);stroke-width:1;transition:stroke var(--t) var(--ease)}
+.jwire3{fill:none;stroke:var(--j-g3);stroke-width:2.8;stroke-linecap:round}
+.jwire1{fill:none;stroke:var(--j-g1);stroke-width:1.5;stroke-linecap:round}
+.glint{fill:var(--j-glint);opacity:0;transform-box:fill-box;transform-origin:center}
+.jw:hover .glint,.jw.shine .glint{animation:glint 1.25s var(--sine) both}
+.jw:hover .glint{animation-iteration-count:infinite}
+.glint.g2{animation-delay:.35s!important}
+@keyframes glint{0%{opacity:0;transform:scale(.2) rotate(0)}40%{opacity:1;transform:scale(1) rotate(45deg)}100%{opacity:0;transform:scale(.3) rotate(90deg)}}
+.jlab{position:absolute;top:100%;left:50%;display:flex;flex-direction:column;align-items:center;
+  transform:translate(calc(-50% + var(--sx,0px)),-8px) scale(.96);transform-origin:50% 0;opacity:0;visibility:hidden;
+  transition:opacity 350ms var(--ease),transform 600ms var(--out),visibility 0s 350ms}
+.jw.open .jlab{opacity:1;visibility:visible;transform:translate(calc(-50% + var(--sx,0px)),0) scale(1);transition-delay:0s}
+.jlab .thread{--len:10px}
+.jlabel{padding:1.75rem 1.05rem .85rem;min-width:8.6rem;text-align:center;color:var(--ink);white-space:nowrap}
+.jlabel b{display:block;font-weight:500;font-size:.86rem}
+.jlabel small{display:block;font-size:.68rem;color:var(--ink2);margin:.2rem 0 .6rem;transition:color var(--t) var(--ease)}
+.jlabel a{pointer-events:auto;font-size:.76rem;color:var(--gold);text-decoration:none;border-bottom:1px dashed var(--perf)}
+.jlabel a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+/* sparkles */
+#spk{position:fixed;inset:0;pointer-events:none;z-index:27}
+.night #spk{filter:drop-shadow(0 0 3px rgba(241,168,102,.95))}
+.spk{position:absolute;left:0;top:0;width:10px;height:10px;will-change:transform,opacity;
+  clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);background:var(--j-glint)}
+.spk.au{background:var(--j-g2)}
+@keyframes wag
+/* fireflies */
+.ffl{position:absolute;inset:0;opacity:0;transition:opacity 1800ms var(--ease) calc(var(--d) + 400ms)}
+.night .ffl{opacity:1}
+.ff{position:absolute;left:0;top:0;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;
+  background:radial-gradient(circle,#FFE9D2 0 1.7px,rgba(238,138,53,.62) 2.8px,rgba(230,119,36,0) 13px);will-change:transform,opacity}
+
+/* leaves */
+.leaf{position:absolute;left:-11px;top:-17px;width:22px;height:34px;will-change:transform;
+  filter:drop-shadow(0 12px 6px var(--shadow))}
+.leaf svg{display:block}
+
+/* hanging tags */
+.hang{position:fixed;top:0;z-index:20;transform-origin:50% 0;filter:drop-shadow(2px 9px 7px var(--shadow));
+  transition:filter var(--t) var(--ease) var(--d)}
+.sway{transform-origin:50% 0;animation:sway 6.5s var(--sine) infinite alternate}
+.drop{display:flex;flex-direction:column;align-items:center;animation:drop 1300ms var(--out) both 500ms}
+.toggle-hang .drop{animation-delay:750ms}
+.toggle-hang .sway{animation-duration:5.2s;animation-delay:-2s}
+@keyframes sway{from{transform:rotate(-1.3deg)}to{transform:rotate(1.3deg)}}
+@keyframes drop{from{transform:translate3d(0,-110%,0)}}
+.thread{width:1px;height:calc(var(--len) + 14px);margin-bottom:-14px;background:var(--thread);position:relative;z-index:2;
+  transition:background-color var(--t) var(--ease) var(--d)}
+.tag{position:relative;background-color:var(--tag);background-image:var(--grain-url);
+  transition:background-color var(--t) var(--ease) var(--d),color var(--t) var(--ease) var(--d)}
+.tag::before{content:"";position:absolute;top:6.5px;left:calc(50% - 7.5px);width:15px;height:15px;border-radius:50%;
+  background:var(--ring);transition:background-color var(--t) var(--ease) var(--d)}
+
+.title-hang{right:clamp(16px,6vw,88px);--len:clamp(26px,8vh,92px)}
+.title{padding:2rem 1.6rem 1.05rem 1.5rem;color:var(--ink);min-width:11.5rem}
+.title h1{font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:clamp(2rem,1.2rem + 2.2vw,3.1rem);line-height:1;letter-spacing:.14em}
+.title h1 span{display:block;padding-right:.15em;margin-top:.35rem;font-family:"Vazirmatn",Tahoma,sans-serif;font-weight:300;font-size:.36em;letter-spacing:0;color:var(--ink2);transition:color var(--t) var(--ease) var(--d)}
+.title p{margin-top:.75rem;padding-top:.55rem;border-top:1px dashed var(--perf);font-size:.78rem;line-height:1.4;
+  color:var(--ink2);letter-spacing:.02em;transition:color var(--t) var(--ease) var(--d),border-color var(--t) var(--ease) var(--d)}
+
+.toggle-hang{left:clamp(16px,5vw,64px);--len:clamp(16px,4.5vh,46px)}
+.toggle{display:flex;align-items:center;gap:.6rem;padding:1.7rem 1.05rem .85rem;border:0;font:inherit;font-size:.92rem;direction:ltr;
+  color:var(--ink2);cursor:pointer;touch-action:manipulation}
+.opt{transition:color 500ms var(--ease)}
+.o-day{color:var(--ink)} .night .o-day{color:var(--ink2)} .night .o-night{color:var(--ink)}
+.track{position:relative;width:2.6rem;height:1.3rem;border-radius:1rem;background:var(--groove);
+  box-shadow:inset 0 1px 2px var(--shadow);transition:background-color var(--t) var(--ease)}
+.knob{position:absolute;top:.17rem;left:.17rem;width:.96rem;height:.96rem;border-radius:50%;background:var(--c-sun);
+  box-shadow:0 1px 2px var(--shadow);transition:transform 650ms var(--out),background-color 650ms var(--ease),scale 150ms var(--out)}
+.night .knob{transform:translateX(1.3rem);background:var(--c-moon)}
+.toggle:hover .knob{scale:1.08}
+.toggle:active .knob{scale:.9}
+.toggle:focus-visible .track{outline:2px solid var(--ink);outline-offset:3px}
+
+@media (max-aspect-ratio: 4/5){
+  .title-hang{--len:clamp(18px,4.5vh,48px)}
+  .title{padding:1.85rem 1.2rem .9rem 1.15rem;min-width:0}
+  .title h1{font-size:clamp(1.3rem,5.6vw,1.9rem)}
+  .title p{font-size:.72rem}
+  .toggle{font-size:.85rem;gap:.5rem;padding:1.6rem .85rem .75rem}
+  .toggle-hang{--len:clamp(12px,3vh,30px)}
+}
+@media (prefers-reduced-motion: reduce){
+  .layer > svg,.drop,.hang-c,.bfly,.jw-drop{animation:none}
+  .sway,.hang-c svg,.night .star,.glint{animation:none}
+}
+/* shop tag hanging from the title tag */
+.thread.sub{--len:clamp(14px,3vh,30px)}
+.shop{padding:1.95rem 1.4rem 1.15rem;min-width:11.5rem;text-align:center;color:var(--ink)}
+.shop small{display:block;font-size:.7rem;color:var(--ink2);letter-spacing:.04em;transition:color var(--t) var(--ease) var(--d)}
+.shop h2{font-weight:500;font-size:1.02rem;margin:.2rem 0 .7rem}
+.shop ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.35rem .9rem;font-size:.8rem;margin-bottom:.85rem}
+.shop a{color:inherit;text-decoration:none}
+.shop ul a{color:var(--ink2);border-bottom:1px dashed transparent;transition:color 300ms var(--ease),border-color 300ms var(--ease)}
+.shop ul a:hover{color:var(--ink);border-color:var(--perf)}
+.cta{display:inline-block;padding:.5rem 1.15rem;border-radius:2rem;background:var(--gold);color:var(--tag)!important;font-size:.82rem;font-weight:500;
+  box-shadow:0 1px 2px var(--shadow);transition:background-color var(--t) var(--ease),transform 200ms var(--out)}
+.cta:hover{transform:translateY(-1px)}
+.shop a:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+@media (max-aspect-ratio: 4/5){
+  .shop{padding:1.8rem 1rem 1rem;min-width:0}
+  .shop ul{font-size:.74rem;gap:.3rem .7rem}
+  .title h1{font-size:clamp(1.8rem,8vw,2.4rem)}
+}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* ================= NEY STORE ================= */
+:root{--s-bg:#FBF5EA;--s-surf:#FFFCF7;--s-soft:#F6E9D6;--s-line:#EADBC3;--s-ink:#1C130D;--s-ink2:#6B5443;--s-gold:#E67724;--s-gold2:#F1A866;--s-on:#1C130D;--s-ruby:#B5541A;--s-ok:#2B4A6C;--s-shadow:0 18px 40px -24px rgba(28,19,13,.30)}
+.night{--s-bg:#0E1D31;--s-surf:#152B46;--s-soft:#1B3452;--s-line:#28476A;--s-ink:#F3E6C8;--s-ink2:#A8B6C7;--s-gold:#EE8A35;--s-gold2:#F6C9A0;--s-on:#0E1D31;--s-ruby:#F1A866;--s-ok:#8FB3D1;--s-shadow:0 18px 40px -24px rgba(0,0,0,.6)}
+#spk{z-index:300}
+#app{position:fixed;inset:0;z-index:100;overflow-y:auto;overflow-x:hidden;background:var(--s-bg);color:var(--s-ink);
+  font-family:"Vazirmatn",Tahoma,sans-serif;line-height:1.7;opacity:0;visibility:hidden;transform:translateY(18px);
+  transition:opacity 450ms var(--ease),transform 650ms var(--out),visibility 0s 450ms,background-color var(--t) var(--ease),color var(--t) var(--ease);
+  -webkit-overflow-scrolling:touch;overscroll-behavior:contain;scroll-behavior:smooth}
+#app.open{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+#app *{box-sizing:border-box}
+:where(#app) a{color:inherit;text-decoration:none}
+:where(#app) button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+#app img,#app svg{display:block}
+#app :focus-visible{outline:2px solid var(--s-gold);outline-offset:3px;border-radius:6px}
+.s-wrap{max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,32px)}
+.s-ic{width:42px;height:42px;display:inline-grid;place-items:center;border-radius:50%;position:relative;transition:background-color 250ms var(--ease)}
+.s-ic:hover{background:var(--s-soft)}
+.s-ic svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.s-cc{position:absolute;top:4px;left:3px;min-width:17px;height:17px;padding:0 4px;border-radius:9px;background:var(--s-gold);color:var(--s-on);
+  font-size:.66rem;line-height:17px;text-align:center;font-weight:700;transform:scale(0);transition:transform 350ms var(--out)}
+.s-cc.on{transform:scale(1)} .s-cc.bump{animation:bump 450ms var(--out)}
+@keyframes bump{40%{transform:scale(1.45)}}
+
+/* header */
+.s-hd{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--s-bg) 86%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--s-line);transition:background-color var(--t) var(--ease),border-color var(--t) var(--ease)}
+.s-hd-in{height:68px;display:flex;align-items:center;gap:24px}
+.s-logo{display:flex;align-items:baseline;gap:10px;white-space:nowrap}
+.s-logo b{font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:1.7rem;letter-spacing:.16em;line-height:1}
+.s-logo small{font-size:.72rem;color:var(--s-ink2)}
+.s-nav{display:flex;gap:4px;margin-inline-start:12px}
+.s-nav a{padding:8px 12px;border-radius:999px;font-size:.9rem;color:var(--s-ink2);transition:color 250ms,background-color 250ms}
+.s-nav a:hover{color:var(--s-ink)} .s-nav a.on{color:var(--s-ink);background:var(--s-soft)}
+.s-acts{margin-inline-start:auto;display:flex;align-items:center;gap:2px}
+.s-back{display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--s-ink2);padding:0 12px 0 6px;height:42px;border-radius:999px}
+.s-back:hover{background:var(--s-soft);color:var(--s-ink)}
+.s-back svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* product image (paper + thread) */
+.s-img{position:relative;aspect-ratio:4/5;border-radius:16px;overflow:hidden;background-color:var(--s-soft);background-image:linear-gradient(color-mix(in srgb,var(--s-soft) 74%,transparent),color-mix(in srgb,var(--s-soft) 74%,transparent)),var(--grain-url);
+  display:flex;justify-content:center;transition:background-color var(--t) var(--ease)}
+.s-hang{height:88%;width:64%;display:flex;flex-direction:column;align-items:center;transform-origin:50% 0;
+  animation:sway 6.5s var(--sine) infinite alternate;animation-delay:var(--dl,0s);filter:drop-shadow(0 -1px 0 var(--edge)) drop-shadow(2px 10px 8px var(--shadow))}
+.s-thr{width:1px;flex:0 0 22%;background:var(--thread)}
+.s-img[data-t=ring] .s-hang{width:44%}.s-img[data-t=brace] .s-hang{width:72%}.s-img[data-t=ring]:not(.mini) .s-thr{flex-basis:30%}
+.s-jw{flex:1;width:100%;min-height:0}
+.s-jw svg{width:100%;height:100%;overflow:visible}
+.s-img path{fill-rule:evenodd;transition:fill var(--t) var(--ease)}
+.s-img .g{fill:url(#grain);opacity:var(--grainO)}
+.s-img:hover .glint,.s-pdp-img .glint{animation:glint 1.3s var(--sine) infinite both}
+.s-card:hover .s-hang{animation:swing2 1.6s var(--sine) infinite alternate}
+@keyframes swing2{from{transform:rotate(-3.5deg)}to{transform:rotate(3.5deg)}}
+.s-img.mini{width:72px;flex:0 0 72px;aspect-ratio:1;border-radius:12px}
+.s-img.mini .s-thr{flex-basis:14%}
+.spin svg{animation:spinY 1.4s var(--out)}
+@keyframes spinY{to{transform:rotateY(720deg)}}
+.gd-r{--j-g1:#d39079;--j-g2:#f2c7b5;--j-g3:#9b5b46}
+.gd-w{--j-g1:#c4c8c5;--j-g2:#f4f5f1;--j-g3:#858a86}
+.gm-dia{--j-di:#eef4f2;--j-di2:#c4d6d3;--j-di3:#fff;--j-ru:#e9f0ee;--j-ru2:#fff;--j-em:#e9f0ee;--j-em2:#fff}
+.gm-ruby{--j-di:#b02a40;--j-di2:#7d1a2b;--j-di3:#e0596c;--j-ru:#a82539;--j-ru2:#d4495c;--j-em:#a82539;--j-em2:#d4495c}
+.gm-em{--j-di:#1f7a63;--j-di2:#14594a;--j-di3:#6cc3a5;--j-ru:#1f7a63;--j-ru2:#58b597;--j-em:#1f7a63;--j-em2:#58b597}
+
+/* buttons, chips, fields */
+.s-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:50px;padding:0 28px;border-radius:999px;
+  background:var(--s-gold)!important;color:var(--s-on)!important;font-weight:500!important;font-size:.95rem;white-space:nowrap;
+  transition:transform 250ms var(--out),box-shadow 250ms,background-color var(--t);box-shadow:0 10px 24px -14px var(--s-gold)}
+.s-btn:hover{transform:translateY(-1px);box-shadow:0 14px 28px -14px var(--s-gold)}
+.s-btn:active{transform:translateY(0) scale(.98)}
+.s-btn.ghost{background:transparent!important;color:var(--s-ink)!important;border:1px solid var(--s-line)!important;box-shadow:none}
+.s-btn.full{width:100%}
+.s-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7}
+.s-chips{display:flex;gap:8px;flex-wrap:wrap}
+.s-chip{height:38px;padding:0 16px;border-radius:999px;border:1px solid var(--s-line)!important;font-size:.85rem;color:var(--s-ink2)!important;
+  transition:all 250ms var(--ease);white-space:nowrap}
+.s-chip:hover{color:var(--s-ink)!important}
+.s-chip.on{background:var(--s-ink)!important;color:var(--s-bg)!important;border-color:var(--s-ink)!important}
+.s-sw{width:30px;height:30px;border-radius:50%;border:2px solid var(--s-bg)!important;box-shadow:0 0 0 1px var(--s-line);transition:box-shadow 250ms}
+.s-sw.on{box-shadow:0 0 0 2px var(--s-gold)}
+.s-sw[data-v=y]{background:linear-gradient(135deg,#f3d681,#c8952f)!important}
+.s-sw[data-v=r]{background:linear-gradient(135deg,#f2c7b5,#c27a63)!important}
+.s-sw[data-v=w]{background:linear-gradient(135deg,#fafaf7,#b4b8b5)!important}
+.s-field{display:flex;flex-direction:column;gap:6px;font-size:.85rem}
+.s-field span{color:var(--s-ink2)}
+.s-field input,.s-field textarea,.s-field select,.s-sel{width:100%;height:50px;padding:0 16px;border-radius:14px;border:1px solid var(--s-line);background:var(--s-surf);
+  color:var(--s-ink);font:inherit;font-size:.92rem;transition:border-color 250ms,background-color var(--t)}
+.s-field textarea{height:96px;padding:12px 16px;resize:vertical}
+.s-field input:focus,.s-field textarea:focus,.s-sel:focus{outline:none;border-color:var(--s-gold)}
+.s-field.bad input,.s-field.bad textarea{border-color:var(--s-ruby)}
+.s-field em{font-style:normal;font-size:.75rem;color:var(--s-ruby);display:none} .s-field.bad em{display:block}
+.s-sel{height:40px;width:auto;padding:0 14px;border-radius:999px;font-size:.85rem;cursor:pointer}
+
+/* sections */
+.s-sec{padding:clamp(48px,8vw,96px) 0}
+.s-eye{font-size:.78rem;color:var(--s-gold);letter-spacing:.06em;font-weight:500}
+.s-h2{font-size:clamp(1.4rem,1rem + 1.4vw,2rem);font-weight:500;line-height:1.35;margin-top:4px}
+.s-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:28px}
+.s-link{font-size:.88rem;color:var(--s-ink2);border-bottom:1px solid var(--s-line);padding-bottom:2px}
+.s-link:hover{color:var(--s-ink)}
+
+/* hero */
+.s-hero{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,5vw,64px);align-items:center;padding:clamp(32px,6vw,72px) 0 clamp(24px,4vw,48px)}
+.s-hero h1{font-size:clamp(2.1rem,1.2rem + 3.6vw,3.7rem);font-weight:500;line-height:1.2;margin:10px 0 16px}
+.s-hero h1 i{font-style:normal;color:var(--s-gold)}
+.s-hero p{color:var(--s-ink2);max-width:30rem;font-size:1rem}
+.s-hero .s-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.s-stats{display:flex;gap:32px;margin-top:40px;color:var(--s-ink2);font-size:.8rem}
+.s-stats b{display:block;color:var(--s-ink);font-size:1.25rem;font-weight:500}
+.s-art{position:relative;container-type:size;aspect-ratio:1/1.02;border-radius:28px;background-color:var(--s-soft);background-image:linear-gradient(color-mix(in srgb,var(--s-soft) 70%,transparent),color-mix(in srgb,var(--s-soft) 70%,transparent)),var(--grain-url);overflow:hidden}
+.s-art .s-hh{position:absolute;top:0;display:flex;flex-direction:column;align-items:center;transform-origin:50% 0;
+  animation:sway 6s var(--sine) infinite alternate;filter:drop-shadow(0 -1px 0 var(--edge)) drop-shadow(3px 14px 10px var(--shadow))}
+.s-art .s-hh span{width:1px;background:var(--thread)}
+.s-art .s-hh svg{overflow:visible}
+.s-art .s-hh path{fill-rule:evenodd} .s-art .g{fill:url(#grain);opacity:var(--grainO)}
+.s-art .glint{animation:glint 2.4s var(--sine) infinite both}
+.s-art-tag{position:absolute;bottom:22px;right:22px;background:var(--s-surf);border-radius:14px;padding:12px 16px;font-size:.8rem;box-shadow:var(--s-shadow)}
+.s-art-tag b{display:block;font-weight:500;font-size:.9rem}
+
+/* categories */
+.s-cats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.s-cat{display:flex;flex-direction:column;gap:12px}
+.s-cat .s-img{aspect-ratio:1}
+.s-cat b{font-weight:500} .s-cat small{color:var(--s-ink2);font-size:.78rem;margin-inline-start:6px}
+
+/* product grid */
+.s-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px 20px}
+.s-card{position:relative;display:flex;flex-direction:column}
+.s-badge{position:absolute;top:12px;right:12px;z-index:2;font-size:.7rem;padding:3px 10px;border-radius:999px;background:var(--s-surf);color:var(--s-ink)}
+.s-wish{position:absolute;top:8px;left:8px;z-index:2;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;
+  background:color-mix(in srgb,var(--s-surf) 80%,transparent)!important;transition:transform 250ms var(--out)}
+.s-wish svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6;transition:fill 250ms}
+.s-wish.on svg{fill:var(--s-ruby);stroke:var(--s-ruby)} .s-wish:active{transform:scale(.85)}
+.s-card-b{padding:14px 2px 0}
+.s-card-b h3{font-size:.95rem;font-weight:500;line-height:1.5}
+.s-card-b p{font-size:.78rem;color:var(--s-ink2)}
+.s-price{font-size:.92rem;margin-top:6px;font-weight:500}
+.s-quick{position:absolute;left:12px;right:12px;top:calc(100% - 160px);height:42px;border-radius:999px;background:var(--s-surf)!important;font-size:.82rem!important;
+  box-shadow:var(--s-shadow);opacity:0;transform:translateY(8px);transition:opacity 300ms var(--ease),transform 400ms var(--out)}
+.s-card:hover .s-quick,.s-quick:focus-visible{opacity:1;transform:none}
+.s-quick:hover{background:var(--s-ink)!important;color:var(--s-bg)!important}
+
+/* listing */
+.s-lhead{padding:clamp(28px,5vw,56px) 0 20px}
+.s-lhead h1{font-size:clamp(1.6rem,1.1rem + 2vw,2.5rem);font-weight:500}
+.s-lhead p{color:var(--s-ink2);font-size:.9rem}
+.s-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px 0 28px;border-top:1px solid var(--s-line);margin-top:20px}
+.s-bar .s-fl{display:flex;align-items:center;gap:18px;flex-wrap:wrap;font-size:.82rem;color:var(--s-ink2)}
+.s-bar .s-g{display:flex;align-items:center;gap:8px}
+.s-cnt{font-size:.82rem;color:var(--s-ink2)}
+.s-empty{text-align:center;padding:72px 0;color:var(--s-ink2)}
+.s-empty svg{width:44px;height:44px;margin:0 auto 12px;fill:none;stroke:currentColor;stroke-width:1.2}
+.s-empty .s-btn{margin-top:20px}
+
+/* product page */
+.s-crumb{display:flex;gap:8px;align-items:center;font-size:.8rem;color:var(--s-ink2);padding:22px 0}
+.s-crumb a:hover{color:var(--s-ink)}
+.s-pdp{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(24px,5vw,64px);align-items:start}
+.s-pdp-img{position:sticky;top:92px}
+.s-pdp-img .s-img{aspect-ratio:1;border-radius:24px;cursor:pointer}
+.s-pdp-img .s-hang{width:52%}
+.s-pdp-note{font-size:.75rem;color:var(--s-ink2);text-align:center;margin-top:10px}
+.s-info h1{font-size:clamp(1.5rem,1.1rem + 1.6vw,2.2rem);font-weight:500;line-height:1.35;margin:6px 0 4px}
+.s-info .s-sub{color:var(--s-ink2);font-size:.88rem}
+.s-info .s-price{font-size:1.35rem;margin:18px 0 6px}
+.s-info .s-desc{color:var(--s-ink2);font-size:.92rem;margin:14px 0 6px}
+.s-opt{margin-top:24px}
+.s-opt h4{font-size:.82rem;font-weight:500;margin-bottom:10px;display:flex;justify-content:space-between}
+.s-opt h4 span{color:var(--s-ink2);font-weight:400}
+.s-buy{display:flex;gap:10px;margin-top:28px;align-items:center}
+.s-buy .s-btn{flex:1}
+.s-qty{display:inline-flex;align-items:center;height:50px;border:1px solid var(--s-line);border-radius:999px;padding:0 4px}
+.s-qty button{width:38px;height:38px;border-radius:50%;display:grid;place-items:center}
+.s-qty button:hover{background:var(--s-soft)}
+.s-qty svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8}
+.s-qty b{min-width:28px;text-align:center;font-weight:500}
+.s-qty.sm{height:36px}.s-qty.sm button{width:28px;height:28px}
+.s-wbig{width:50px;height:50px;border-radius:50%;border:1px solid var(--s-line)!important;display:grid;place-items:center}
+.s-wbig svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.6}
+.s-wbig.on svg{fill:var(--s-ruby);stroke:var(--s-ruby)}
+.s-trust{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px}
+.s-trust div{border:1px solid var(--s-line);border-radius:14px;padding:12px;font-size:.74rem;color:var(--s-ink2);display:flex;flex-direction:column;gap:6px}
+.s-trust svg{width:20px;height:20px;fill:none;stroke:var(--s-gold);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.s-acc{margin-top:28px;border-top:1px solid var(--s-line)}
+.s-acc details{border-bottom:1px solid var(--s-line)}
+.s-acc summary{list-style:none;cursor:pointer;padding:16px 0;font-size:.92rem;font-weight:500;display:flex;justify-content:space-between;align-items:center}
+.s-acc summary::-webkit-details-marker{display:none}
+.s-acc summary::after{content:"+";font-weight:300;font-size:1.3rem;color:var(--s-ink2);transition:transform 300ms var(--out)}
+.s-acc details[open] summary::after{transform:rotate(45deg)}
+.s-acc .s-accb{padding:0 0 18px;color:var(--s-ink2);font-size:.86rem}
+.s-spec{display:grid;grid-template-columns:auto 1fr;gap:6px 24px}
+.s-spec dt{color:var(--s-ink2)} .s-spec dd{color:var(--s-ink)}
+
+/* story / features / newsletter / footer */
+.s-story{border-radius:28px;background-color:var(--s-soft);background-image:linear-gradient(color-mix(in srgb,var(--s-soft) 70%,transparent),color-mix(in srgb,var(--s-soft) 70%,transparent)),var(--grain-url);padding:clamp(32px,6vw,72px);display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:center}
+.s-story p{color:var(--s-ink2);margin-top:12px}
+.s-feats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.s-feat{background:var(--s-surf);border-radius:18px;padding:20px;transition:background-color var(--t)}
+.s-feat svg{width:26px;height:26px;fill:none;stroke:var(--s-gold);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;margin-bottom:12px}
+.s-feat b{display:block;font-weight:500;font-size:.92rem}
+.s-feat span{font-size:.78rem;color:var(--s-ink2)}
+.s-news{text-align:center;max-width:560px;margin:0 auto}
+.s-news p{color:var(--s-ink2);margin-top:8px}
+.s-news form{display:flex;gap:8px;margin-top:24px}
+.s-news .s-field{flex:1}
+.s-ft{border-top:1px solid var(--s-line);padding:48px 0 32px;font-size:.84rem;color:var(--s-ink2)}
+.s-ft-g{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}
+.s-ft h5{color:var(--s-ink);font-size:.88rem;font-weight:500;margin-bottom:12px}
+.s-ft ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.s-ft a:hover{color:var(--s-ink)}
+.s-ft .s-logo b{font-size:1.5rem}
+.s-ft-b{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:40px;padding-top:20px;border-top:1px solid var(--s-line);font-size:.76rem}
+
+/* drawer */
+.s-ov{position:fixed;inset:0;z-index:30;background:rgba(28,19,13,.38);opacity:0;visibility:hidden;transition:opacity 400ms var(--ease),visibility 0s 400ms}
+.s-ov.open{opacity:1;visibility:visible;transition-delay:0s}
+.s-drawer{position:fixed;top:0;bottom:0;left:0;z-index:31;width:min(430px,100%);background:var(--s-surf);display:flex;flex-direction:column;
+  transform:translateX(-102%);transition:transform 550ms var(--out),background-color var(--t);box-shadow:0 0 60px rgba(0,0,0,.18)}
+.s-drawer.open{transform:none}
+.s-dh{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid var(--s-line)}
+.s-dh b{font-weight:500}
+.s-db{flex:1;overflow-y:auto;padding:8px 20px}
+.s-df:empty{display:none}
+.s-df{padding:18px 20px calc(18px + env(safe-area-inset-bottom));border-top:1px solid var(--s-line)}
+.s-line{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--s-line);align-items:center}
+.s-line:last-child{border-bottom:0}
+.s-line .s-li{flex:1;min-width:0;font-size:.82rem}
+.s-line .s-li b{display:block;font-weight:500;font-size:.88rem}
+.s-line .s-li small{color:var(--s-ink2);display:block}
+.s-line .s-lr{display:flex;align-items:center;justify-content:space-between;margin-top:8px;gap:8px}
+.s-rm{color:var(--s-ink2)!important;width:32px;height:32px;display:grid;place-items:center;border-radius:50%}
+.s-rm svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.6}
+.s-rm:hover{background:var(--s-soft)}
+.s-tot{display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:6px;color:var(--s-ink2)}
+.s-tot.big{color:var(--s-ink);font-size:1.02rem;font-weight:500;margin:10px 0 16px}
+.s-prog{font-size:.76rem;color:var(--s-ink2);margin-bottom:14px}
+.s-prog i{display:block;height:4px;border-radius:2px;background:var(--s-soft);margin-top:8px;overflow:hidden}
+.s-prog i::after{content:"";display:block;height:100%;width:var(--p);background:var(--s-gold);border-radius:2px;transition:width 600ms var(--out)}
+
+/* search */
+.s-search{position:fixed;top:0;left:0;right:0;z-index:32;background:var(--s-surf);padding:18px 0 22px;box-shadow:var(--s-shadow);
+  transform:translateY(-105%);transition:transform 500ms var(--out),background-color var(--t)}
+.s-search.open{transform:none}
+.s-sbox{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--s-line);padding-bottom:10px}
+.s-sbox svg{width:22px;height:22px;fill:none;stroke:var(--s-ink2);stroke-width:1.6}
+.s-sbox input{flex:1;height:44px;border:0;background:none;font:inherit;font-size:1.1rem;color:var(--s-ink);outline:none}
+.s-sres{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px;margin-top:14px;max-height:60vh;overflow-y:auto}
+.s-sres a{display:flex;gap:12px;align-items:center;padding:8px;border-radius:14px;font-size:.85rem}
+.s-sres a:hover{background:var(--s-soft)}
+.s-sres .s-img.mini{width:56px;flex-basis:56px}
+.s-sres small{display:block;color:var(--s-ink2)}
+
+/* checkout */
+.s-co{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(24px,4vw,56px);align-items:start;padding-bottom:64px}
+.s-co h1{font-size:clamp(1.5rem,1.1rem + 1.6vw,2.2rem);font-weight:500;padding:28px 0 8px}
+.s-box{border:1px solid var(--s-line);border-radius:20px;padding:clamp(18px,3vw,28px);margin-top:18px;background:var(--s-surf);transition:background-color var(--t)}
+.s-box h3{font-size:.98rem;font-weight:500;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.s-box h3 i{font-style:normal;width:24px;height:24px;border-radius:50%;background:var(--s-ink);color:var(--s-bg);display:grid;place-items:center;font-size:.74rem}
+.s-fg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.s-fg .w{grid-column:1/-1}
+.s-radio{display:flex;align-items:center;gap:12px;border:1px solid var(--s-line);border-radius:14px;padding:14px 16px;cursor:pointer;margin-bottom:10px;font-size:.88rem;transition:border-color 250ms}
+.s-radio:has(input:checked){border-color:var(--s-gold);background:color-mix(in srgb,var(--s-gold) 6%,transparent)}
+.s-radio input{accent-color:var(--s-gold);width:18px;height:18px}
+.s-radio span{flex:1} .s-radio small{display:block;color:var(--s-ink2);font-size:.76rem}
+.s-sum{position:sticky;top:92px}
+.s-demo{font-size:.74rem;color:var(--s-ink2);text-align:center;margin-top:10px}
+.s-done{text-align:center;max-width:520px;margin:0 auto;padding:72px 0 96px}
+.s-done .s-ok{width:76px;height:76px;border-radius:50%;margin:0 auto 20px;display:grid;place-items:center;background:color-mix(in srgb,var(--s-ok) 14%,transparent)}
+.s-done .s-ok svg{width:36px;height:36px;fill:none;stroke:var(--s-ok);stroke-width:2}
+.s-done h1{font-size:1.8rem;font-weight:500}
+.s-done p{color:var(--s-ink2);margin-top:8px}
+.s-done .s-row{display:flex;gap:10px;justify-content:center;margin-top:28px;flex-wrap:wrap}
+
+/* tabs + toast */
+.s-tabs{display:none}
+.s-toast{position:fixed;left:50%;bottom:28px;z-index:40;transform:translate(-50%,20px);opacity:0;background:var(--s-ink);color:var(--s-bg);
+  padding:12px 20px;border-radius:999px;font-size:.85rem;transition:all 400ms var(--out);pointer-events:none;white-space:nowrap;box-shadow:var(--s-shadow)}
+.s-toast.on{opacity:1;transform:translate(-50%,0)}
+.s-view{animation:viewin 600ms var(--out) both}
+@keyframes viewin{from{opacity:0;transform:translateY(12px)}}
+
+@media (max-width:960px){
+  .s-grid{grid-template-columns:repeat(3,1fr)}
+  .s-ft-g{grid-template-columns:1fr 1fr}
+  .s-story{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .s-nav,.s-back span,.s-logo small{display:none}
+  .s-hd-in{height:60px;gap:8px}
+  .s-hero{grid-template-columns:1fr;padding-top:20px}
+  .s-art{order:-1;aspect-ratio:1.25}
+  .s-stats{gap:22px;margin-top:28px}
+  .s-cats{grid-template-columns:repeat(2,1fr);gap:12px}
+  .s-grid{grid-template-columns:repeat(2,1fr);gap:26px 12px}
+  .s-quick{display:none}
+  .s-pdp,.s-co{grid-template-columns:1fr}
+  .s-pdp-img,.s-sum{position:static}
+  .s-feats{grid-template-columns:1fr}
+  .s-fg{grid-template-columns:1fr}
+  .s-ft-g{grid-template-columns:1fr 1fr;gap:24px}
+  .s-ft-g>div:first-child{grid-column:1/-1}
+  .s-news form{flex-direction:column}
+  .s-hide-m{display:none!important}
+  #app main{padding-bottom:84px}
+  .s-tabs{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:12;height:calc(64px + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom);
+    background:color-mix(in srgb,var(--s-surf) 92%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--s-line)}
+  .s-tabs a,.s-tabs button{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:.68rem;color:var(--s-ink2);position:relative}
+  .s-tabs .on{color:var(--s-ink)}
+  .s-tabs svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .s-tabs .s-cc{top:6px;left:calc(50% - 22px)}
+  .s-toast{bottom:84px}
+  .s-drawer{top:auto;left:0;right:0;width:100%;max-height:88vh;border-radius:22px 22px 0 0;transform:translateY(102%)}
+  .s-drawer.open{transform:none}
+  .s-bar{gap:12px}
+  .s-trust{grid-template-columns:1fr 1fr 1fr}
+}
+@media (prefers-reduced-motion: reduce){.s-hang,.s-art .s-hh,.s-view{animation:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="grain" patternUnits="userSpaceOnUse" width="192" height="192"><image id="grainImg" width="192" height="192"/></pattern>
+    <radialGradient id="winglow"><stop offset="0" stop-color="#F6C9A0" stop-opacity=".85"/><stop offset=".4" stop-color="#EE8A35" stop-opacity=".32"/><stop offset="1" stop-color="#E67724" stop-opacity="0"/></radialGradient>
+  </defs>
+</svg>
+
+<main>
+  <div id="stage" aria-label="جنگلی کاغذی با تپه‌ها، کاج‌ها، رودخانه، قارچ‌ها و پروانه طلایی NEY و جواهرات آویزان"></div>
+
+  <div class="hang title-hang" id="titleHang" style="--d:900ms" dir="rtl">
+    <div class="sway"><div class="drop">
+      <span class="thread"></span>
+      <div class="tag title" id="titleTag">
+        <h1>NEY <span>طلا و جواهر دست‌ساز</span></h1>
+        <p id="hint">جواهرات را تاب دهید · روی پروانه بزنید</p>
+      </div>
+      <span class="thread sub"></span>
+      <nav class="tag shop" id="shopTag" aria-label="کالکشن‌ها">
+        <small>کالکشن پاییز ۱۴۰۵</small>
+        <h2>زیورهای جنگل طلایی</h2>
+        <ul>
+          <li><a href="#shop/rings">انگشتر</a></li>
+          <li><a href="#shop/necklaces">گردنبند</a></li>
+          <li><a href="#shop/bracelets">دستبند</a></li>
+          <li><a href="#shop/earrings">گوشواره</a></li>
+        </ul>
+        <a class="cta" href="#shop">مشاهده و خرید</a>
+      </nav>
+    </div></div>
+  </div>
+
+  <div class="hang toggle-hang" id="toggleHang" style="--d:900ms">
+    <div class="sway"><div class="drop">
+      <span class="thread"></span>
+      <button class="tag toggle" id="toggle" aria-pressed="false" aria-label="حالت شب">
+        <span class="opt o-day" aria-hidden="true">روز</span>
+        <span class="track" aria-hidden="true"><span class="knob"></span></span>
+        <span class="opt o-night" aria-hidden="true">شب</span>
+      </button>
+    </div></div>
+  </div>
+  <div id="jewels" dir="rtl"></div>
+  <button class="bfly" id="bfly" type="button" aria-label="پروانه طلایی NEY — بزنید تا برقصد"></button>
+  <div id="spk" aria-hidden="true"></div>
+</main>
+<div id="app" dir="rtl" lang="fa" aria-label="فروشگاه NEY"></div>
+
+<script>
+(() => {
+const root = document.documentElement;
+const stage = document.getElementById('stage');
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const coarse = matchMedia('(pointer: coarse)').matches;
+const lerp = (a,b,t)=>a+(b-a)*t, clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+function mulberry(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;}}
+const f1 = n => (Math.round(n*10)/10);
+
+/* ---------- geometry helpers ---------- */
+function area(p){let a=0;for(let i=0;i<p.length;i++){const q=p[i],w=p[(i+1)%p.length];a+=q[0]*w[1]-w[0]*q[1];}return a/2;}
+function D(p){ if(p.length<3) return ''; if(area(p)<0) p=p.slice().reverse(); return 'M'+p.map(q=>f1(q[0])+','+f1(q[1])).join('L')+'Z'; }
+function rough(p,R,seg,amp){
+  const out=[];
+  for(let i=0;i<p.length;i++){
+    const a=p[i], b=p[(i+1)%p.length];
+    const dx=b[0]-a[0], dy=b[1]-a[1], L=Math.hypot(dx,dy)||1;
+    const k=Math.max(1,Math.round(L/seg)), nx=-dy/L, ny=dx/L;
+    for(let j=0;j<k;j++){
+      const t=j/k+(j?(R()-.5)*.35/k:0), o=(R()-.5)*2*amp*(j?1:.35);
+      out.push([a[0]+dx*t+nx*o, a[1]+dy*t+ny*o]);
+    }
+  }
+  return out;
+}
+function circ(cx,cy,r,n){const p=[];for(let i=0;i<n;i++){const a=i/n*Math.PI*2;p.push([cx+Math.cos(a)*r,cy+Math.sin(a)*r]);}return p;}
+function ellipse(cx,cy,rx,ry,rot,n=8){const p=[],c=Math.cos(rot),s=Math.sin(rot);for(let i=0;i<n;i++){const a=i/n*Math.PI*2,x=Math.cos(a)*rx,y=Math.sin(a)*ry;p.push([cx+x*c-y*s,cy+x*s+y*c]);}return p;}
+const paper=(cls,d,g=true)=>d?`<path class="${cls}" d="${d}"/>`+(g?`<path class="g" d="${d}"/>`:''):'';
+
+const V={};
+function ridgeFn(R,base,amp,cycles){
+  const terms=[[.6,1],[1.3,.45],[3.1,.16],[7.3,.05]].map(([c,a])=>[c*cycles*2*Math.PI/V.vw,a*amp,R()*6.283]);
+  return x=>{let y=base;for(const [f,a,p] of terms) y+=Math.sin(x*f+p)*a;return y;};
+}
+function sampleRidge(fn,R,x0,x1,step,j){const p=[];let x=x0;while(x<x1){p.push([x,fn(x)+(R()-.5)*2*j]);x+=step*(.55+R()*.9);}p.push([x1,fn(x1)]);return p;}
+function crest(fn,x,range){let best=x,by=fn(x);for(let d=-range;d<=range;d+=range/14){const y=fn(x+d);if(y<by){by=y;best=x+d;}}return best;}
+
+function pine(R,cx,by,h,w){
+  const n=3+Math.floor(R()*3), th=h*.07, tw=Math.max(1.2,w*.06), step=(h-th)/(n+.6);
+  const Lp=[],Rp=[];
+  for(let k=0;k<n;k++){
+    const y=by-th-k*step, f=1-k/(n+.3);
+    const wl=w*.5*f*(.88+R()*.24), wr=w*.5*f*(.88+R()*.24), nw=w*.5*f*.42;
+    Lp.push([cx-wl,y+(R()-.5)*step*.2],[cx-nw,y-step*1.22]);
+    Rp.push([cx+wr,y+(R()-.5)*step*.2],[cx+nw*(.85+R()*.3),y-step*1.22]);
+  }
+  Rp.reverse();
+  return [[cx-tw,by+8],[cx-tw,by-th],...Lp,[cx+(R()-.5)*w*.05,by-h],...Rp,[cx+tw,by-th],[cx+tw,by+8]];
+}
+function cloud(R,cx,cy,w){
+  const n=4+Math.floor(R()*2), pts=[[cx+w/2,cy],[cx-w/2,cy]];
+  let top=cy, sx=cx;
+  for(let i=0;i<n;i++){
+    const xi=cx-w/2+w*(i+.5)/n, ri=w/n*.62*(1+.75*Math.sin(Math.PI*(i+.5)/n))*(.9+R()*.2);
+    const a0=i===0?Math.PI:Math.PI*.86, a1=i===n-1?0:Math.PI*.14;
+    for(let j=0;j<=8;j++){const a=a0+(a1-a0)*j/8;pts.push([xi+Math.cos(a)*ri,Math.min(cy,cy-Math.sin(a)*ri*.9)]);}
+    if(cy-ri*.9<top){top=cy-ri*.9;sx=xi;}
+  }
+  return {pts,top,sx};
+}
+function fern(R,bx,by,size){
+  let d='';
+  const n=5+Math.floor(R()*3);
+  for(let i=0;i<n;i++){
+    const u=(i/(n-1))*2-1;
+    const a0=-Math.PI/2+u*1.05+(R()-.5)*.2;
+    const len=size*(1-Math.abs(u)*.35)*(.85+R()*.3);
+    const bend=(u>=0?1:-1)*(.5+Math.abs(u)*.9)*(.8+R()*.4);
+    const N=10;let x=bx,y=by,a=a0;const sp=[[x,y,a]];
+    for(let j=1;j<=N;j++){a+=bend/N;x+=Math.cos(a)*len/N;y+=Math.sin(a)*len/N;sp.push([x,y,a]);}
+    const th=Math.max(.8,size*.013), Lp=[], Rp=[];
+    sp.forEach(([x,y,a],j)=>{const w=th*(1-j/N*.7);Lp.push([x+Math.cos(a-Math.PI/2)*w,y+Math.sin(a-Math.PI/2)*w]);Rp.push([x+Math.cos(a+Math.PI/2)*w,y+Math.sin(a+Math.PI/2)*w]);});
+    d+=D([...Lp,...Rp.reverse()]);
+    for(let j=1;j<N;j++){
+      const [x1,y1,a1]=sp[j],[x2,y2]=sp[j+1];
+      const ll=len*.24*Math.pow(1-j/N,.7)*Math.min(1,j/2.2)*(.85+R()*.3);
+      for(const sd of [-1,1]){const pa=a1+sd*1.05;d+=D([[x1,y1],[x1+Math.cos(pa)*ll,y1+Math.sin(pa)*ll],[x2,y2]]);}
+    }
+  }
+  return d;
+}
+function mushroom(R,x,y,m,tilt){
+  const ox=tilt*m*.12;
+  const stem=[[x-m*.13,y+3],[x-m*.1,y-m*.3],[x-m*.08+ox,y-m*.58],[x+m*.08+ox,y-m*.58],[x+m*.1,y-m*.3],[x+m*.14,y+3]];
+  const cx=x+ox, cy=y-m*.55, rw=m*.42, rh=m*.34, cap=[];
+  for(let i=0;i<=14;i++){const a=Math.PI+i/14*Math.PI;cap.push([cx+Math.cos(a)*rw,cy+Math.sin(a)*rh]);}
+  cap.push([cx+rw*.7,cy+rh*.12],[cx,cy+rh*.2],[cx-rw*.7,cy+rh*.12]);
+  let spots='';
+  [[-.42,-.42,.06],[.12,-.72,.05],[.5,-.3,.045],[-.08,-.3,.035]].forEach(([a,b,r])=>spots+=D(rough(circ(cx+a*rw,cy+b*rh,m*r,9),R,m*.03,m*.006)));
+  return {stem:D(rough(stem,R,m*.14,m*.01)),cap:D(rough(cap,R,m*.1,m*.012)),spots};
+}
+function foxglove(R,bx,by,h,lean){
+  const N=16,Ls=[],Rs=[],P=t=>[bx+lean*t*t,by-h*t];
+  for(let i=0;i<=N;i++){const t=i/N,[x,y]=P(t),w=Math.max(.7,h*(.02-.013*t));Ls.push([x-w,y]);Rs.push([x+w,y]);}
+  const stem=D([[bx-h*.02,by+6],...Ls,...Rs.reverse(),[bx+h*.02,by+6]]);
+  let A='',B='';
+  const nb=8+Math.floor(R()*4);
+  for(let i=0;i<nb;i++){
+    const q=i/(nb-1), t=.3+.62*q, [x,y]=P(t), b=h*.088*(1-.55*q);
+    const side=R()<.72?1:-1, th=-side*(.5+R()*.3), c=Math.cos(th), s=Math.sin(th);
+    const loc=[[-.16,0],[.16,0],[.3,.55],[.45,.98],[.17,.86],[0,1.02],[-.17,.86],[-.45,.98],[-.3,.55]];
+    const pts=loc.map(([u,v])=>{const lx=u*b,ly=v*b;return [x+side*h*.012+lx*c-ly*s,y+lx*s+ly*c];});
+    const d=D(rough(pts,R,b*.3,b*.02));
+    if((q<.5)!==(R()<.18)) B+=d; else A+=d;
+  }
+  [.94,.97,.995].forEach((t,i)=>{const [x,y]=P(t);A+=D(circ(x,y,h*(.016-i*.003),8));});
+  return {stem,A,B};
+}
+function cottage(R,x,by,c,out,ci){
+  out.walls+=D(rough([[x-c*.5,by],[x-c*.5,by-c*.6],[x+c*.5,by-c*.6],[x+c*.5,by]],R,c*.2,c*.01));
+  out.roofs+=D(rough([[x-c*.66,by-c*.56],[x-c*.05,by-c*1.12],[x+c*.08,by-c*1.12],[x+c*.66,by-c*.56]],R,c*.2,c*.012));
+  out.roofs+=D(rough([[x+c*.24,by-c*.8],[x+c*.24,by-c*1.16],[x+c*.38,by-c*1.16],[x+c*.38,by-c*.66]],R,c*.2,c*.008));
+  out.doors+=D([[x-c*.07,by+1],[x-c*.07,by-c*.33],[x+c*.08,by-c*.33],[x+c*.08,by+1]]);
+  [[x-c*.36,by-c*.45],[x+c*.2,by-c*.45]].forEach(([wx,wy],wi)=>{
+    const w=c*.16, d=ci*520+wi*260+Math.round(R()*200);
+    out.glows+=`<circle class="glow" style="--w:${d}ms" cx="${f1(wx+w/2)}" cy="${f1(wy+w/2)}" r="${f1(c*.6)}" fill="url(#winglow)"/>`;
+    out.wins+=`<path class="win" style="--w:${d}ms" d="${D([[wx,wy],[wx+w,wy],[wx+w,wy+w*.95],[wx,wy+w*.95]])}"/>`;
+  });
+}
+function blade(x,by,h,lean,w){
+  const Lp=[],Rp=[],N=6;
+  for(let i=0;i<=N;i++){const t=i/N,px=x+lean*t*t,py=by-h*t,ww=w/2*Math.pow(1-t,.9);Lp.push([px-ww,py]);Rp.push([px+ww,py]);}
+  return D([...Lp,...Rp.reverse()]);
+}
+function leafSVG(R,cls){
+  const d=D(rough([[0,-15],[4.6,-10],[7,-3],[6,4],[2.6,10],[.8,12.5],[.9,16],[-.9,16],[-.8,12.5],[-2.6,10],[-6,4],[-7,-3],[-4.6,-10]],R,3,.35));
+  return `<svg width="22" height="34" viewBox="-11 -17 22 34" aria-hidden="true" focusable="false"><path class="${cls}" d="${d}"/><path class="g" d="${d}"/><path class="vein" d="${D([[0,-12],[.7,-2],[.3,11],[-.3,11],[-.7,-2]])}"/></svg>`;
+}
+
+/* ---------- procedural paper grain ---------- */
+function makeGrain(){
+  const S=192,c=document.createElement('canvas');c.width=c.height=S;
+  const g=c.getContext('2d'),img=g.createImageData(S,S),d=img.data,R=mulberry(7);
+  const vgrid=n=>{const a=[];for(let i=0;i<n*n;i++)a.push(R());const v=(i,j)=>a[((j%n+n)%n)*n+((i%n+n)%n)];
+    return (x,y)=>{const gx=x/S*n,gy=y/S*n,x0=Math.floor(gx),y0=Math.floor(gy),fx=gx-x0,fy=gy-y0,sx=fx*fx*(3-2*fx),sy=fy*fy*(3-2*fy);
+      return lerp(lerp(v(x0,y0),v(x0+1,y0),sx),lerp(v(x0,y0+1),v(x0+1,y0+1),sx),sy);};};
+  const n1=vgrid(6),n2=vgrid(16),n3=vgrid(48);
+  for(let y=0;y<S;y++)for(let x=0;x<S;x++){
+    const v=n1(x,y)*.4+n2(x,y)*.3+n3(x,y)*.15+R()*.15-.5,i=(y*S+x)*4;
+    if(v<0){d[i]=58;d[i+1]=44;d[i+2]=30;d[i+3]=Math.min(255,-v*200);}else{d[i]=255;d[i+1]=250;d[i+2]=238;d[i+3]=Math.min(255,v*160);}
+  }
+  g.putImageData(img,0,0);g.lineCap='round';
+  for(let k=0;k<70;k++){
+    const x=R()*S,y=R()*S,a=R()*Math.PI*2,l=4+R()*14,dark=R()<.4;
+    g.strokeStyle=dark?'rgba(28,19,13,.16)':'rgba(255,250,238,.36)';g.lineWidth=.5+R()*.6;
+    for(const ox of [-S,0,S])for(const oy of [-S,0,S]){g.beginPath();g.moveTo(x+ox,y+oy);g.quadraticCurveTo(x+ox+Math.cos(a+.6)*l*.5,y+oy+Math.sin(a+.6)*l*.5,x+ox+Math.cos(a)*l,y+oy+Math.sin(a)*l);g.stroke();}
+  }
+  return c.toDataURL('image/png');
+}
+const grainURL=makeGrain();
+document.getElementById('grainImg').setAttribute('href',grainURL);
+root.style.setProperty('--grain-url',`url(${grainURL})`);
+
+/* ---------- layers ---------- */
+const LDEF=[
+  {id:'sky',f:0},{id:'cel',f:.03},{id:'far',f:.06,sh:[1,2,9]},{id:'hills',f:.11,sh:[2,2,10]},
+  {id:'fpines',f:.17,sh:[2,2,11]},{id:'meadow',f:.25,sh:[2,3,12]},{id:'npines',f:.35,sh:[3,3,14]},
+  {id:'ground',f:.47,sh:[3,4,15]},{id:'ff',f:.56},{id:'grass',f:.72,sh:[3,4,16]},{id:'leaves',f:.95}
+];
+const layers={};
+LDEF.forEach((d,i)=>{const el=document.createElement('div');el.className='layer l-'+d.id;el.style.setProperty('--i',i);el.style.setProperty('--d',(i*110)+'ms');stage.appendChild(el);layers[d.id]={...d,el,lx:1e9,ly:1e9};});
+const shStyle=a=>a?`filter:drop-shadow(0 -1px 0 var(--edge)) drop-shadow(${a[0]}px ${a[1]}px ${a[2]}px var(--shadow))`:'';
+
+let ffs=[], leaves=[];
+
+function build(){
+  const vw=innerWidth, vh=innerHeight;
+  const pad=Math.round(vw*.06+24), padY=Math.round(vh*.05+20);
+  const W=vw+pad*2, H=vh+padY*2, asp=vw/vh, P=clamp((1.2-asp)/.65,0,1), s=Math.min(vw,vh);
+  const L=(a,b)=>a+(b-a)*P;
+  const X0=-pad-24, X1=vw+pad+24, YB=vh+padY+24;
+  const seg=Math.max(7,s*.011), jit=.9, cyc=L(1,.72), k=s*L(.00095,.0013);
+  Object.assign(V,{vw,vh,pad,padY,W,H,P,s,k});
+  for(const id in layers){const el=layers[id].el;el.style.left=-pad+'px';el.style.top=-padY+'px';el.style.width=W+'px';el.style.height=H+'px';}
+  const svg=(inner,sh)=>`<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" style="${shStyle(sh)}" aria-hidden="true" focusable="false"><g transform="translate(${pad} ${padY})">${inner}</g></svg>`;
+  const land=(fn,R,step)=>D([...sampleRidge(fn,R,X0,X1,step||seg*1.3,jit),[X1,YB],[X0,YB]]);
+
+  /* sky + stars */
+  let R=mulberry(11), stars='';
+  const ns=Math.round(clamp(vw*vh/18000,30,90));
+  for(let i=0;i<ns;i++){
+    const x=R()*vw,y=R()*vh*L(.44,.42),r=.7+R()*R()*2.6,q=r*.42;
+    stars+=`<path class="star" style="animation-delay:${(-R()*6).toFixed(2)}s;animation-duration:${(2.5+R()*4).toFixed(2)}s" d="${D([[x,y-r*2.4],[x+q,y-q],[x+r*2.4,y],[x+q,y+q],[x,y+r*2.4],[x-q,y+q],[x-r*2.4,y],[x-q,y-q]])}"/>`;
+  }
+  layers.sky.el.innerHTML=svg(`<rect class="sky" x="${-pad}" y="${-padY}" width="${W}" height="${H}"/><rect class="g" x="${-pad}" y="${-padY}" width="${W}" height="${H}"/><g class="stars">${stars}</g>`);
+
+  /* hanging sun + paper moon */
+  R=mulberry(13);
+  const scx=vw*L(.69,.64), scy=vh*L(.2,.25), sr=s*L(.068,.1);
+  const bw=sr*3.4, bh=padY+scy+sr*1.75, vbY=-(padY+scy);
+  const rays=[];for(let i=0;i<30;i++){const a=i/30*Math.PI*2,r=i%2?sr*1.14:sr*1.5;rays.push([Math.cos(a)*r,Math.sin(a)*r]);}
+  const cel=(cls,inner,strEnd,extra='')=>`<div class="hang-c ${cls}" style="left:${f1(pad+scx-bw/2)}px;width:${f1(bw)}px;height:${f1(bh)}px;--up:${f1(-(bh+16))}px">${extra}<svg width="${f1(bw)}" height="${f1(bh)}" viewBox="${f1(-bw/2)} ${f1(vbY)} ${f1(bw)} ${f1(bh)}" style="${shStyle([2,3,8])};animation-delay:${(-R()*7).toFixed(2)}s" aria-hidden="true" focusable="false"><line class="string" x1="0" y1="${f1(vbY)}" x2="0" y2="${f1(-strEnd)}"/>${inner}</svg></div>`;
+  const sunIn=`<g class="hit" data-toggle>${paper('sunray',D(rough(rays,R,sr*.12,sr*.01)))}${paper('sun',D(rough(circ(0,0,sr,40),R,sr*.1,sr*.012)))}${paper('sunin',D(rough(circ(0,0,sr*.68,34),R,sr*.1,sr*.01)))}</g>`;
+  let craters='';[[-.3,-.25,.18],[.28,.1,.13],[-.05,.4,.1],[.2,-.44,.07]].forEach(([a,b,c])=>craters+=D(rough(circ(a*sr,b*sr,c*sr,16),R,sr*.06,sr*.008)));
+  const moonIn=`<g class="hit" data-toggle>${paper('moon',D(rough(circ(0,0,sr*.95,40),R,sr*.1,sr*.012)))}<path class="crater" d="${craters}"/></g>`;
+  const glow=`<div class="mglow" style="left:${f1(bw/2-sr*2.6)}px;top:${f1(padY+scy-sr*2.6)}px;width:${f1(sr*5.2)}px;height:${f1(sr*5.2)}px"></div>`;
+  layers.cel.el.innerHTML=cel('sunH',sunIn,sr*1.5)+cel('moonH',moonIn,sr*.95,glow);
+
+  /* far hills + hanging clouds */
+  R=mulberry(23);
+  const fFar=ridgeFn(R,vh*L(.5,.45),vh*L(.055,.045),cyc);
+  let cl='',strs='';
+  [[L(.42,.24),L(.13,.36),s*L(.25,.34)],[L(.9,.84),L(.3,.43),s*L(.19,.26)]].forEach(([cx,cy,w])=>{
+    const c=cloud(R,cx*vw,cy*vh,w);cl+=D(rough(c.pts,R,seg,.7));
+    strs+=`<line class="string" x1="${f1(c.sx)}" y1="${-padY-4}" x2="${f1(c.sx)}" y2="${f1(c.top+3)}"/>`;
+  });
+  layers.far.el.innerHTML=svg(strs+paper('cloud',cl)+paper('far',land(fFar,R,seg*1.5)),layers.far.sh);
+
+  /* hills + cottages */
+  R=mulberry(37);
+  const fHill=ridgeFn(R,vh*L(.585,.53),vh*L(.045,.04),cyc*1.25);
+  const c=s*L(.032,.05);
+  const cots=[L(.2,.2),L(.8,.78)].map(f=>crest(fHill,vw*f,vw*.06));
+  const co={walls:'',roofs:'',doors:'',glows:'',wins:''};
+  cots.forEach((x,ci)=>cottage(R,x,fHill(x)+c*.14,c,co,ci));
+  layers.hills.el.innerHTML=svg(paper('hill',land(fHill,R))+paper('wall',co.walls)+paper('roof',co.roofs)+`<path class="door" d="${co.doors}"/>`+co.glows+co.wins,layers.hills.sh);
+
+  /* far pines */
+  R=mulberry(51);
+  const fFp=ridgeFn(R,vh*L(.645,.59),vh*L(.022,.02),cyc*1.6);
+  let trees='';
+  for(let x=X0;x<X1;){
+    const h=vh*L(.075,.062)*(.6+R()*.75), w=h*(.4+R()*.14);
+    let skip=R()<.1;for(const cx of cots) if(Math.abs(x-cx)<c*1.5+w*.4) skip=true;
+    if(!skip) trees+=D(rough(pine(R,x,fFp(x)+h*.05,h,w),R,w*.16,w*.018));
+    x+=w*(.5+R()*.55);
+  }
+  layers.fpines.el.innerHTML=svg(paper('fpine',land(fFp,R)+trees),layers.fpines.sh);
+
+  /* meadow + winding river */
+  R=mulberry(67);
+  const rPh=-.5+R()*.3, rFreq=L(1.25,2.05), rAmp=L(.16,.22), rBase=L(.56,.52);
+  const cxAt=t=>vw*(rBase+rAmp*Math.sin(t*Math.PI*rFreq+rPh)*(.3+.7*t));
+  const hwAt=t=>vw*(.005+L(.13,.2)*Math.pow(t,1.55));
+  const rc0=cxAt(0);
+  const fMd0=ridgeFn(R,vh*L(.70,.645),vh*L(.018,.016),cyc*1.1);
+  const fMd=x=>fMd0(x)+vh*.008*Math.exp(-(((x-rc0)/(vw*.04))**2));
+  const yTop=fMd(rc0)-1, yBot=YB, tOf=y=>clamp((y-yTop)/(yBot-yTop),0,1);
+  const rl=[],rr=[];
+  for(let i=0;i<=48;i++){const t=i/48,y=yTop+t*(yBot-yTop),cx=cxAt(t),hw=hwAt(t);rl.push([cx-hw+(R()-.5)*1.2,y]);rr.push([cx+hw+(R()-.5)*1.2,y]);}
+  let rip='';
+  for(let i=0;i<11;i++){const t=.12+.85*(i/11)+(R()-.5)*.04,y=yTop+t*(yBot-yTop),cx=cxAt(t)+(R()-.5)*hwAt(t)*.9,l=hwAt(t)*(.35+R()*.5),th=.8+t*2.6;
+    rip+=D([[cx-l/2,y],[cx-l*.1,y-th],[cx+l/2,y+th*.2],[cx,y+th*.5]]);}
+  layers.meadow.el.innerHTML=svg(paper('meadow',land(fMd,R))+paper('river',D([[rc0,yTop-1],...rl,...rr.reverse()]))+`<path class="ripple" d="${rip}"/>`,layers.meadow.sh);
+
+  const banks=(fn,R,inset)=>{
+    const pts=sampleRidge(fn,R,X0,X1,seg*1.2,jit);
+    const Lx=y=>{const t=tOf(y);return cxAt(t)-hwAt(t)*(1-inset);}, Rx=y=>{const t=tOf(y);return cxAt(t)+hwAt(t)*(1-inset);};
+    let i=0;while(i<pts.length&&pts[i][0]<Lx(pts[i][1]))i++;
+    const lft=pts.slice(0,Math.max(1,i)),yl=lft[lft.length-1][1],xl=Lx(yl);
+    lft.push([xl,yl]);
+    for(let y=yl+5;y<YB;y+=5+R()*5) lft.push([Lx(y)+(R()-.5)*1.2,y]);
+    lft.push([Lx(YB),YB],[X0,YB]);
+    let j=pts.length-1;while(j>=0&&pts[j][0]>Rx(pts[j][1]))j--;
+    const rg=pts.slice(Math.min(j+1,pts.length-1)),yr=rg[0][1],xr=Rx(yr),edge=[];
+    for(let y=yr+5;y<YB;y+=5+R()*5) edge.push([Rx(y)+(R()-.5)*1.2,y]);
+    return {d:D(lft)+D([[X1,YB],[Rx(YB),YB],...edge.reverse(),[xr,yr],...rg]),xl,xr};
+  };
+
+  /* near pines on the banks */
+  R=mulberry(83);
+  const yN=vh*L(.77,.715), tN=tOf(yN), rcN=cxAt(tN), hwN=hwAt(tN);
+  const fN0=ridgeFn(R,yN,vh*L(.02,.018),cyc*1.3);
+  const fN=x=>fN0(x)+vh*.016*Math.exp(-(((x-rcN)/(hwN*2.4+vw*.02))**2));
+  const bN=banks(fN,R,.1);
+  let nt='';
+  for(let x=X0;x<X1;){
+    const e=clamp(Math.abs(x/vw-.5)*2.2,0,1);
+    const h=vh*L(.22,.17)*(.7+R()*.55)*(.65+.55*e), w=h*(.36+R()*.1);
+    if((x<bN.xl-w*.55||x>bN.xr+w*.55)&&R()<.3+.7*e) nt+=D(rough(pine(R,x,fN(x)+h*.03,h,w),R,w*.14,w*.014));
+    x+=w*(.45+R()*.5);
+  }
+  layers.npines.el.innerHTML=svg(paper('npine',bN.d+nt),layers.npines.sh);
+
+  /* ground: ferns, foxgloves, mushrooms */
+  R=mulberry(97);
+  const yG=vh*L(.845,.8), tG=tOf(yG), rcG=cxAt(tG), hwG=hwAt(tG);
+  const fG0=ridgeFn(R,yG,vh*L(.016,.014),cyc*1.2);
+  const fG=x=>fG0(x)+vh*.014*Math.exp(-(((x-rcG)/(hwG*2.2+vw*.02))**2));
+  const bG=banks(fG,R,.22);
+  V.fG=fG;V.gxl=bG.xl;V.gxr=bG.xr;
+  const lp=f=>lerp(0,bG.xl,f), rp=f=>lerp(bG.xr,vw,f);
+  V.perches=[];
+  let ferns='',stems='',bA='',bB='',ms='',caps='',spots='';
+  [[lp(.04),.085],[lp(.52),.07],[rp(.3),.08],[rp(.98),.095]].forEach(([x,z])=>ferns+=fern(R,x,fG(x)+2,s*L(z,z*1.3)));
+  const fh=s*L(.25,.27);
+  [[lp(.16),fh,s*.02],[lp(.27),fh*.7,-s*.012],[rp(.84),fh*.86,-s*.02]].forEach(([x,h,ln])=>{V.perches.push([x+ln*.86,fG(x)+2-h*.93]);const g=foxglove(R,x,fG(x)+2,h,ln);stems+=g.stem;bA+=g.A;bB+=g.B;});
+  const m=s*L(.04,.055);
+  const ml=lp(.4), mr=rp(.62);
+  [[ml,m,-.3],[ml+m*.55,m*.7,.4],[ml-m*.5,m*.55,-.6],[mr,m*.85,.3],[mr+m*.5,m*.55,-.2]].forEach(([x,z,t],mi)=>{if(mi===0||mi===3) V.perches.push([x+t*z*.12,fG(x)+z*.04-z*.88]);const q=mushroom(R,x,fG(x)+z*.04,z,t);ms+=q.stem;caps+=q.cap;spots+=q.spots;});
+  layers.ground.el.innerHTML=svg(paper('ground',bG.d)+paper('fern',ferns)+paper('stem',stems)+paper('bellB',bB)+paper('bellA',bA)+paper('mstem',ms)+paper('cap',caps)+`<path class="spot" d="${spots}"/>`,layers.ground.sh);
+
+  layoutJewels();layoutBfly();
+
+  /* fireflies */
+  R=mulberry(131);
+  const nf=coarse?10:18;
+  layers.ff.el.innerHTML='<div class="ffl">'+'<i class="ff"></i>'.repeat(nf)+'</div>';
+  ffs=[...layers.ff.el.querySelectorAll('.ff')].map(el=>({el,bx:pad+R()*vw,by:padY+lerp(vh*L(.56,.5),vh*.94,R()),ax:20+R()*70,ay:8+R()*30,fx:.08+R()*.22,fy:.1+R()*.3,ph:R()*6.283,fl:.5+R()*1.4}));
+  ffs.forEach(f=>{f.el.style.transform=`translate3d(${f1(f.bx)}px,${f1(f.by)}px,0)`;});
+
+  /* foreground grasses */
+  R=mulberry(151);
+  let gA='',gB='',sst='',seeds='';
+  const gh=vh*L(.13,.1);
+  for(let x=X0;x<X1;){
+    const e=clamp(Math.abs(x/vw-.5)*2,0,1.15);
+    const vis=gh*(.35+R()*.65)*(.45+.9*Math.pow(e,1.5)), h=vis+(YB-vh), w=3+R()*5*(.6+e*.6);
+    const lean=(R()-.5)*vis*.55+(x<vw/2?-1:1)*vis*.18*e;
+    const bd=blade(x,YB,h,lean,w);
+    if(R()<.5) gA+=bd; else gB+=bd;
+    if(e>.35&&R()<.12){
+      const hs=h+vis*.4, ln=lean*.6;
+      sst+=blade(x,YB,hs,ln,1.8);
+      for(let q=0;q<7;q++){const t=.72+q*.04,px=x+ln*t*t,py=YB-hs*t,sd=q%2?1:-1;seeds+=D(ellipse(px+sd*2,py,2.1,4.6,sd*.5));}
+    }
+    x+=2.5+R()*6;
+  }
+  layers.grass.el.innerHTML=svg(paper('grassA',gA)+paper('grassB',gB)+paper('sstem',sst,false)+`<path class="seed" d="${seeds}"/>`,layers.grass.sh);
+
+  /* drifting leaves */
+  R=mulberry(171);
+  const nl=coarse?6:10;
+  layers.leaves.el.innerHTML=Array.from({length:nl},(_,i)=>`<div class="leaf">${leafSVG(R,['la','lb','lc'][i%3])}</div>`).join('');
+  leaves=[...layers.leaves.el.querySelectorAll('.leaf')].map(el=>({el,x0:R()*W,y:R()*H,vy:16+R()*22,A:18+R()*46,fw:.4+R()*.6,ph:R()*6.283,rot:R()*360,vr:(R()-.5)*40,ff:.6+R()*1.2,sc:(.8+R()*.9)*L(1,.85)}));
+  if(reduce) leaves.forEach(l=>l.el.style.transform=`translate3d(${f1(l.x0)}px,${f1(l.y)}px,0) rotate(${f1(l.rot)}deg) scale(${l.sc.toFixed(2)})`);
+
+  for(const id in layers){layers[id].lx=1e9;}
+}
+
+/* ---------- day / night ---------- */
+const toggle=document.getElementById('toggle');
+let night=false, ffUntil=0;
+function setNight(on){
+  night=on;root.classList.toggle('night',on);
+  toggle.setAttribute('aria-pressed',String(on));
+  if(!on) ffUntil=performance.now()+3200;
+}
+toggle.addEventListener('click',()=>setNight(!night));
+stage.addEventListener('click',e=>{if(e.target.closest('[data-toggle]')) setNight(!night);});
+
+/* ---------- pointer parallax ---------- */
+let tx=0,ty=0,cx=0,cy=0,drag=null;
+addEventListener('pointermove',e=>{
+  if(e.pointerType==='mouse'){tx=(e.clientX/innerWidth-.5)*2;ty=(e.clientY/innerHeight-.5)*2;}
+  else if(drag){tx=clamp(drag.bx-(e.clientX-drag.x)/(innerWidth*.35),-1,1);ty=clamp(drag.by-(e.clientY-drag.y)/(innerHeight*.35),-1,1);}
+},{passive:true});
+stage.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse') drag={x:e.clientX,y:e.clientY,bx:tx,by:ty};});
+addEventListener('pointerup',()=>drag=null);
+addEventListener('pointercancel',()=>drag=null);
+document.documentElement.addEventListener('mouseleave',()=>{tx=0;ty=0;});
+document.getElementById('hint').textContent=coarse?'جواهرات را بکشید · روی پروانه بزنید':'جواهرات را تاب دهید · روی پروانه بزنید';
+
+/* ---------- tags: hand-cut clip with a punched hole ---------- */
+function clipTag(el){
+  const w=el.offsetWidth,h=el.offsetHeight;if(!w) return;
+  const R=mulberry(Math.round(w*7+h)),c=Math.min(h*.3,20);
+  const pts=rough([[c,0],[w-c,0],[w,c],[w,h],[0,h],[0,c]],R,9,.6);
+  const hx=w/2,hy=14,hr=4.5;
+  el.style.clipPath=`path(evenodd, "M${pts.map(p=>p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' L')} Z M${hx-hr} ${hy} a${hr} ${hr} 0 1 0 ${hr*2} 0 a${hr} ${hr} 0 1 0 ${-hr*2} 0 Z")`;
+}
+const tags=[document.getElementById('titleTag'),document.getElementById('shopTag'),toggle];
+const ro=new ResizeObserver(()=>tags.forEach(clipTag));tags.forEach(t=>ro.observe(t));
+const titleHang=document.getElementById('titleHang'),toggleHang=document.getElementById('toggleHang');
+
+/* ---------- sparkles ---------- */
+const spkWrap=document.getElementById('spk'), sparks=[], spkPool=[];
+function spark(x,y,n,o={}){
+  for(let i=0;i<n&&sparks.length<80;i++){
+    let el=spkPool.pop();
+    if(!el){el=document.createElement('i');spkWrap.appendChild(el);}
+    el.className='spk'+(Math.random()<.5?' au':'');el.style.display='';
+    const a=o.a!=null?o.a+(Math.random()-.5)*(o.spread??6.283):Math.random()*6.283, sp=(o.v??60)*(.35+Math.random()*.9);
+    sparks.push({el,x,y,vx:Math.cos(a)*sp+(o.vx||0),vy:Math.sin(a)*sp+(o.vy||0),life:0,
+      max:(o.life??900)*(.6+Math.random()*.7)/1000,sz:(o.sz??7)*(.6+Math.random()*.8),rot:Math.random()*90,g:o.g??30});
+  }
+}
+function sparkTick(dt){
+  for(let i=sparks.length-1;i>=0;i--){
+    const p=sparks[i];p.life+=dt;
+    if(p.life>=p.max){p.el.style.display='none';spkPool.push(p.el);sparks.splice(i,1);continue;}
+    const dmp=Math.exp(-dt*2.4);p.vx*=dmp;p.vy=p.vy*dmp+p.g*dt;p.x+=p.vx*dt;p.y+=p.vy*dt;p.rot+=120*dt;
+    const q=p.life/p.max, a=q<.18?q/.18:1-(q-.18)/.82;
+    p.el.style.transform=`translate3d(${(p.x-5).toFixed(1)}px,${(p.y-5).toFixed(1)}px,0) rotate(${p.rot.toFixed(0)}deg) scale(${(p.sz/10*(.4+.6*a)).toFixed(2)})`;
+    p.el.style.opacity=a.toFixed(2);
+  }
+}
+
+/* ---------- jewelry: shapes ---------- */
+const star=(cx,cy,r)=>D([[cx,cy-r],[cx+r*.2,cy-r*.2],[cx+r,cy],[cx+r*.2,cy+r*.2],[cx,cy+r],[cx-r*.2,cy+r*.2],[cx-r,cy],[cx-r*.2,cy-r*.2]]);
+const ring2=(cx,cy,ro,ri,n=40)=>D(circ(cx,cy,ro,n))+D(circ(cx,cy,ri,n));
+function arcBand(cx,cy,r0,r1,a0,a1,n=16){const o=[],i=[];for(let k=0;k<=n;k++){const a=a0+(a1-a0)*k/n;o.push([cx+Math.cos(a)*r1,cy+Math.sin(a)*r1]);i.push([cx+Math.cos(a)*r0,cy+Math.sin(a)*r0]);}return D([...o,...i.reverse()]);}
+function drop(cx,cy,r,n=36){const p=[];for(let k=0;k<n;k++){const t=k/n*Math.PI*2;p.push([cx+r*Math.sin(t)*Math.sin(t/2),cy-r*Math.cos(t)]);}return p;}
+function jewelSVG(J){
+  const R=mulberry(J.seed), rr=(p,a=.18)=>D(rough(p,R,3,a));
+  const vb=`${-J.w/2} 0 ${J.w} ${J.h}`;let s='';
+  if(J.id==='ring'){
+    s+=paper('jg3',ring2(.9,31,22,15.4));
+    s+=paper('jg1',ring2(0,30,21.2,16.1));
+    s+=`<path class="jg2" d="${arcBand(0,30,17.4,19.8,Math.PI*1.08,Math.PI*1.62)+arcBand(0,30,17.6,19.2,Math.PI*.15,Math.PI*.3)}"/>`;
+    s+=paper('jg3',rr([[-6.5,48],[6.5,48],[5,54.5],[-5,54.5]]));
+    s+=paper('jdi',rr([[-5.5,53],[5.5,53],[9.5,57],[0,69],[-9.5,57]],.12));
+    s+=`<path class="jdi2" d="${D([[-9.5,57],[0,57],[0,69]])+D([[3,53],[5.5,53],[9.5,57],[4,57]])}"/><path class="jdi3" d="${D([[-5.5,53],[-1,53],[-3,57]])+D([[0,57],[4,57],[0,69]])}"/>`;
+    s+=`<path class="jg1" d="${D([[-9.6,55.2],[-6.6,54],[-7.6,58]])+D([[9.6,55.2],[6.6,54],[7.6,58]])}"/>`;
+    s+=`<ellipse class="jkn" cx="0" cy="5.5" rx="2.4" ry="4.2"/>`;
+    s+=`<path class="glint" d="${star(7,60,6)}"/><path class="glint g2" d="${star(-15,19,4)}"/>`;
+  }else if(J.id==='ear'){
+    s+=`<path class="jwire3" d="M0,1 C7,0.5 9.5,7 5.5,12 C2.8,15.2 0.8,17 0.6,21"/><path class="jwire1" d="M-.3,.6 C6.5,0 8.8,6.6 5,11.4 C2.4,14.6 .4,16.6 .2,20.6"/>`;
+    s+=paper('jg1',D(circ(.5,24,3.7,16)));s+=`<path class="jg2" d="${D(circ(-.6,22.8,1.2,8))}"/>`;
+    s+=`<path class="jg3" d="${D(ellipse(.5,30,1.5,2.6,0,12))+D(ellipse(.5,30,.6,1.5,0,10))}"/>`;
+    s+=paper('jg3',D(drop(1.1,47,12.6)));
+    s+=paper('jg1',D(drop(.5,46.2,12)));
+    s+=paper('jem',D(drop(.5,47.4,9)),false);
+    s+=`<path class="jem2" d="${D([[.5,40],[-3.6,46],[-1.6,51],[.5,47]])}"/><path class="jhi" d="${D(ellipse(-2.2,45,.9,2,.4,8))}"/>`;
+    s+=`<path class="jg3" d="${D([[-.3,57.5],[1.3,57.5],[1.3,63],[-.3,63]])}"/>`;
+    s+=paper('jpe',D(circ(.5,68.5,5.6,24)));
+    s+=`<path class="jpe2" d="${arcBand(.5,68.5,3.2,5.4,Math.PI*-.15,Math.PI*.8)}"/><path class="jhi" d="${D(circ(-1.3,66.6,1.2,10))}"/>`;
+    s+=`<path class="jg1" d="${D(ellipse(.5,62.8,2.6,1.1,0,10))}"/>`;
+    s+=`<path class="glint" d="${star(9,41,5.5)}"/><path class="glint g2" d="${star(-6,72,3.6)}"/>`;
+  }else if(J.id==='brace'){
+    s+=`<line class="jkn" x1="0" y1="0" x2="0" y2="11"/>`;
+    s+=paper('jg3',D(ellipse(1,39.5,45,27,0,56))+D(ellipse(1,39.5,38.5,20.5,0,52)));
+    s+=paper('jg1',D(ellipse(0,38,44,26,0,56))+D(ellipse(0,38,39,21,0,52)));
+    const arc=(a0,a1,r0x,r0y,r1x,r1y)=>{const o=[],q=[];for(let k=0;k<=18;k++){const a=a0+(a1-a0)*k/18;o.push([Math.cos(a)*r1x,38+Math.sin(a)*r1y]);q.push([Math.cos(a)*r0x,38+Math.sin(a)*r0y]);}return D([...o,...q.reverse()]);};
+    s+=`<path class="jg2" d="${arc(Math.PI*1.12,Math.PI*1.55,40.2,22.2,42.6,24.6)+arc(Math.PI*.12,Math.PI*.3,40.4,22.4,42.4,24.4)}"/>`;
+    s+=`<ellipse class="jkn" cx="0" cy="12.6" rx="2.2" ry="3"/>`;
+    [[-.36,3.6],[0,4.7],[.36,3.6]].forEach(([da,r])=>{const a=Math.PI/2+da,x=Math.cos(a)*41.5,y=38+Math.sin(a)*23.5;
+      s+=paper('jg3',D(circ(x,y,r+1.4,18)),false);s+=`<path class="jdi" d="${D(circ(x,y,r,18))}"/><path class="jdi2" d="${arcBand(x,y,r*.4,r*.95,Math.PI*.1,Math.PI*.9)}"/><path class="jdi3" d="${D(circ(x-r*.35,y-r*.35,r*.28,8))}"/>`;});
+    s+=`<path class="glint" d="${star(11,64,6)}"/><path class="glint g2" d="${star(-30,22,4)}"/>`;
+  }else{
+    const bez=(a,b,c,d,t)=>{const u=1-t;return [u*u*u*a[0]+3*u*u*t*b[0]+3*u*t*t*c[0]+t*t*t*d[0],u*u*u*a[1]+3*u*u*t*b[1]+3*u*t*t*c[1]+t*t*t*d[1]];};
+    let l1='',l3='';
+    for(const sd of [-1,1]){
+      const A=[0,6],B=[sd*30,13],C=[sd*42,58],E=[sd*2,78],N=24;
+      for(let i=1;i<N;i++){
+        const t=i/N,[x,y]=bez(A,B,C,E,t),[x2,y2]=bez(A,B,C,E,t+.01),ang=Math.atan2(y2-y,x2-x);
+        if(i%2) l1+=D(ellipse(x,y,2.5,1.5,ang,10))+D(ellipse(x,y,1.3,.55,ang,8)); else l3+=D(ellipse(x,y,2.2,.6,ang,8));
+      }
+    }
+    s+=`<path class="jg3" d="${l3}"/><path class="jg1" d="${l1}"/>`;
+    s+=paper('jg1',ring2(0,4,3.2,1.7,20),false);
+    s+=`<ellipse class="jkn" cx="0" cy="2.6" rx="1.8" ry="2.8"/>`;
+    s+=paper('jg1',ring2(0,80,3,1.5,20),false);
+    const leaf=(ox,oy,sc)=>{const L=[],Rr=[],N=14;for(let i=0;i<=N;i++){const t=i/N,w=7.6*Math.pow(Math.sin(Math.PI*Math.min(t*1.08,1)),.85)*sc,bx=ox+3*t*t,by=oy+34*t;L.push([bx-w,by]);Rr.push([bx+w,by]);}return [...L,...Rr.reverse()];};
+    s+=paper('jg3',rr(leaf(.9,84,1.06)));
+    s+=paper('jg1',rr(leaf(0,83,1)));
+    s+=`<path class="jg2" d="${D(leaf(0,83,1).slice(0,15).map(([x,y],i)=>[x+(i?1.2:0),y]).concat([[3,117],[1.2,100],[.4,86]]))}"/>`;
+    s+=`<path class="jg3" d="${D([[.2,92],[1.3,92],[2.7,114],[2.1,114]])}"/>`;
+    s+=paper('jru',D(circ(.4,89,4.4,20)),false);
+    s+=`<path class="jru2" d="${D(circ(-.6,88,2.4,14))}"/><path class="jhi" d="${D(ellipse(-1.4,87.2,.8,1.3,.5,8))}"/>`;
+    s+=`<path class="glint" d="${star(6,92,5.5)}"/><path class="glint g2" d="${star(-31,38,3.6)}"/>`;
+  }
+  return `<svg viewBox="${vb}" aria-hidden="true" focusable="false">${s}</svg>`;
+}
+
+/* ---------- jewelry: hangers ---------- */
+const JW=[
+  {id:'neck',seed:301,name:'گردنبند برگ نی',sub:'طلای ۱۸ عیار · یاقوت',href:'#p/4',xs:[.3,.1],Ls:[.24,.29],w:90,h:120,perch:79,gem:[0,90]},
+  {id:'ring',seed:302,name:'حلقه سولیتر',sub:'طلای ۱۸ عیار · الماس',href:'#p/1',xs:[.41,.235],Ls:[.14,.19],w:56,h:72,perch:9,gem:[0,60]},
+  {id:'ear',seed:303,name:'گوشواره قطره',sub:'طلای ۱۸ عیار · زمرد',href:'#p/7',xs:[.52,.36],Ls:[.2,.24],w:40,h:78,perch:35,gem:[.5,47]},
+];
+const jwWrap=document.getElementById('jewels');
+JW.forEach((J,i)=>{
+  const el=document.createElement('div');el.className='jw';el.style.setProperty('--di',i);el.style.setProperty('--d','0ms');
+  el.innerHTML=`<div class="jw-drop"><span class="jthread"></span><button class="jgem" type="button" aria-expanded="false" aria-label="${J.name} — بکشید تا تاب بخورد، بزنید تا جزئیات را ببینید">${jewelSVG(J)}</button><div class="jlab"><span class="thread"></span><div class="tag jlabel"><b>${J.name}</b><small>${J.sub}</small><a href="${J.href}" tabindex="-1">مشاهده جزئیات</a></div></div></div>`;
+  jwWrap.appendChild(el);
+  Object.assign(J,{el,btn:el.querySelector('.jgem'),svg:el.querySelector('.jgem svg'),thr:el.querySelector('.jthread'),
+    jlab:el.querySelector('.jlab'),lab:el.querySelector('.jlabel'),link:el.querySelector('.jlabel a'),th:0,om:0,drag:null,spin:null,ph:Math.random()*6.283,open:false,js:1,px:0,L:100});
+  J.btn.addEventListener('pointerdown',e=>{e.preventDefault();J.btn.setPointerCapture(e.pointerId);J.drag={x0:e.clientX,y0:e.clientY,moved:0,target:null};});
+  J.btn.addEventListener('pointermove',e=>{const d=J.drag;if(!d) return;d.moved=Math.max(d.moved,Math.hypot(e.clientX-d.x0,e.clientY-d.y0));
+    if(d.moved>5) d.target=clamp(Math.atan2(-(e.clientX-J.px),Math.max(30,e.clientY)),-1.15,1.15);});
+  const end=()=>{const d=J.drag;J.drag=null;if(d&&d.moved<6) jewelClick(J);};
+  J.btn.addEventListener('pointerup',end);J.btn.addEventListener('pointercancel',()=>{J.drag=null;});
+  J.btn.addEventListener('click',e=>{if(e.detail===0) jewelClick(J);});
+});
+function jewelAt(J,v){const s=Math.sin(J.th),c=Math.cos(J.th);return [J.px-v*s,v*c];}
+function gemPos(J){const g=J.gem,s=Math.sin(J.th),c=Math.cos(J.th),u=g[0]*J.js,v=J.L+g[1]*J.js;return [J.px+u*c-v*s,u*s+v*c];}
+function setOpen(J,on){
+  J.open=on;J.el.classList.toggle('open',on);J.btn.setAttribute('aria-expanded',String(on));J.link.tabIndex=on?0:-1;
+  if(on){const lw=J.lab.offsetWidth,l=J.px-lw/2,r=J.px+lw/2;J.jlab.style.setProperty('--sx',(l<10?10-l:r>V.vw-10?V.vw-10-r:0).toFixed(0)+'px');}
+}
+function jewelClick(J){
+  const now=performance.now();J.spin={t0:now};J.om+=(Math.random()<.5?-1:1)*1.4;
+  const g=gemPos(J);spark(g[0],g[1],16,{v:120,life:1100,sz:9,g:40});
+  JW.forEach(o=>{if(o!==J&&o.open) setOpen(o,false);});setOpen(J,!J.open);
+  if(bf.mode==='perched'&&bf.perch.t==='jw'&&JW[bf.perch.j]===J) fleeFrom(g[0],g[1]+40,now);
+}
+document.addEventListener('pointerdown',e=>{if(!e.target.closest('.jw')) JW.forEach(J=>J.open&&setOpen(J,false));});
+function layoutJewels(){
+  const narrow=V.vw/V.vh<.8, js=clamp(V.s/700,.82,1.2);
+  JW.forEach(J=>{
+    J.js=js;J.px=V.vw*J.xs[narrow?1:0];J.L=Math.round(V.vh*J.Ls[narrow?1:0]);
+    const W=J.w*js,H=J.h*js;
+    J.el.style.left=f1(J.px-W/2)+'px';J.el.style.width=f1(W)+'px';
+    J.thr.style.height=J.L+'px';J.btn.style.width=f1(W)+'px';J.btn.style.height=f1(H)+'px';
+    if(J.open) setOpen(J,true);
+  });
+}
+function brush(x,y,dx,dy){
+  for(const J of JW){
+    if(J.drag) continue;
+    const s=Math.sin(J.th),c=Math.cos(J.th),rx=x-J.px,u=rx*c+y*s,v=-rx*s+y*c;
+    const bot=J.L+J.h*J.js,hw=J.w*J.js*.5;let hit=0;
+    if(v>J.L&&v<bot&&Math.abs(u)<hw) hit=1; else if(v>0&&v<=J.L&&Math.abs(u)<6) hit=.45;
+    if(!hit) continue;
+    const du=dx*c+dy*s;
+    J.om-=clamp(du/Math.max(40,v)*4.2*hit,-1.4,1.4);
+    if(hit===1&&Math.abs(du)>5&&Math.random()<.4){const g=gemPos(J);spark(g[0],g[1],1,{v:50,sz:6});}
+  }
+}
+let nextShine=performance.now()+3200;
+function jewelTick(now,dt,t){
+  const msw=clamp((tx-cx)*-1,-1,1);
+  for(const J of JW){
+    if(J.drag&&J.drag.target!=null){const nt=lerp(J.th,J.drag.target,1-Math.exp(-dt*16));J.om=(nt-J.th)/Math.max(dt,1e-3);J.th=nt;}
+    else{
+      const Lc=J.L+J.h*J.js*.5, wind=reduce?0:(.34*Math.sin(t*.62+J.ph)+.17*Math.sin(t*1.7+J.ph*2.3));
+      J.om+=(-(2300/Lc)*Math.sin(J.th)-1.05*J.om+wind+msw*1.8)*dt;
+      J.om=clamp(J.om,-7,7);J.th+=J.om*dt;
+    }
+    J.el.style.transform=`rotate(${(J.th*57.2958).toFixed(2)}deg)`;
+    if(J.spin){
+      const q=(now-J.spin.t0)/1500;
+      if(q>=1||reduce){J.spin=null;J.svg.style.transform='';}
+      else{const e=1-Math.pow(1-q,3);J.svg.style.transform=`scaleX(${Math.cos(e*Math.PI*4).toFixed(3)})`;}
+    }
+  }
+  if(!reduce&&now>nextShine){
+    const J=JW[Math.floor(Math.random()*JW.length)];J.el.classList.add('shine');setTimeout(()=>J.el.classList.remove('shine'),1300);
+    const g=gemPos(J);spark(g[0],g[1],2,{v:30,sz:7,g:10});nextShine=now+3400+Math.random()*3200;
+  }
+}
+
+/* ---------- butterfly ---------- */
+function bflySVG(){
+  const R=mulberry(23), rr=(p,a=.35)=>D(rough(p,R,5,a));
+  const ins=(p,o,f)=>p.map(q=>[o[0]+(q[0]-o[0])*f,o[1]+(q[1]-o[1])*f]);
+  const cen=p=>{let x=0,y=0;p.forEach(q=>{x+=q[0];y+=q[1];});return [x/p.length,y/p.length];};
+  const fw=[[1,-5],[7,-19],[16,-31],[28,-38],[40,-38],[47,-31],[46,-21],[40,-11],[30,-4],[16,0],[3,-1]];
+  const hw=[[2,1],[14,2],[27,6],[35,14],[36,24],[30,32],[22,36],[19,41],[17,49],[13,48],[12,39],[7,27],[2,11]];
+  const rim=rr(fw)+rr(hw), gold=rr(ins(fw,cen(fw),.84))+rr(ins(hw,cen(hw),.8));
+  const band=rr(ins(fw,[2,-3],.56))+rr(ins(hw,[2,3],.48));
+  const spots=[[39,-31,3],[44,-24,2.2],[33,-35,1.8],[46.5,-16,1.4],[31,-29,1.3]].map(([x,y,r])=>D(rough(circ(x,y,r,9),R,1.5,.15))).join('');
+  const eye=D(rough(circ(27,21,4.6,12),R,2,.2)), eyeC=D(circ(27.6,20.3,1.7,9));
+  const veins=D([[3,-3],[30,-30],[31,-29]])+D([[3,-2],[38,-18],[38,-17]])+D([[3,3],[24,30],[23,31]]);
+  const wing=paper('brim',rim)+paper('bwa',gold)+paper('bwb',band+eye,false)+`<path class="bsp" d="${spots+eyeC}"/><path class="brim" opacity=".5" d="${veins}"/>`;
+  const body=paper('bbody',D(ellipse(0,9,2.6,13,0,12))+D(ellipse(0,-5,3.6,4.8,0,10))+D(circ(0,-11.5,2.8,10)));
+  const ant=`<path class="bant" d="M-1,-13 C-4,-22 -8,-28 -12,-31 M1,-13 C4,-22 8,-28 12,-31"/><path class="bbody" d="${D(circ(-12.4,-31.4,1.6,8))+D(circ(12.4,-31.4,1.6,8))}"/>`;
+  return `<svg viewBox="-50 -42 100 92" aria-hidden="true" focusable="false"><g class="wl">${wing}</g><g class="wr">${wing}</g>${ant}${body}</svg>`;
+}
+const bfEl=document.getElementById('bfly');bfEl.innerHTML=bflySVG();
+const bwl=bfEl.querySelector('.wl'),bwr=bfEl.querySelector('.wr');
+const bf={x:-200,y:-200,vx:0,vy:0,ang:90,mode:'wander',tx:0,ty:0,until:0,perch:null,pAng:0,ph:0,dust:0,init:false,S:60,seed:Math.random()*9,dance:null,start:0};
+let pX=-1e4,pY=-1e4,pT=0,pVX=0,pVY=0;
+addEventListener('pointermove',e=>{
+  const now=performance.now();
+  if(pT){const d=Math.max(8,now-pT)/1000;pVX=lerp(pVX,(e.clientX-pX)/d,.5);pVY=lerp(pVY,(e.clientY-pY)/d,.5);brush(e.clientX,e.clientY,e.clientX-pX,e.clientY-pY);}
+  pX=e.clientX;pY=e.clientY;pT=now;
+},{passive:true});
+function layoutBfly(){bf.S=clamp(V.s*.085,46,80);bfEl.style.width=f1(bf.S)+'px';bfEl.style.height=f1(bf.S*.92)+'px';}
+const angLerp=(a,b,k)=>{const d=((b-a)%360+540)%360-180;return a+d*clamp(k,0,1);};
+function perchPos(p){
+  if(p.t==='jw'){const J=JW[p.j],[x,y]=jewelAt(J,J.L+J.perch*J.js),o=bf.S*.16;return [x+Math.sin(J.th)*o,y-Math.cos(J.th)*o,J.th*57.3];}
+  const q=V.perches[p.i]||V.perches[0],g=layers.ground,gx=g.lx<1e8?g.lx:0,gy=g.ly<1e8?g.ly:0;
+  return [q[0]+gx,q[1]+gy-bf.S*.14,0];
+}
+function bfWander(){bf.mode='wander';bf.tx=V.vw*(.06+Math.random()*.88);bf.ty=V.vh*(.16+Math.random()*.62);}
+function bfNext(now){
+  const r=Math.random(), idle=now-pT>1400&&pX>0&&pX<V.vw&&pY>0&&pY<V.vh;
+  if(idle&&r<.3){bf.mode='visit';bf.tx=pX+(Math.random()<.5?-1:1)*bf.S*(.7+Math.random()*.5);bf.ty=pY-bf.S*(.4+Math.random()*.5);return;}
+  if(r<.62){
+    const opts=[];V.perches.forEach((_,i)=>opts.push({t:'scene',i}));JW.forEach((_,j)=>opts.push({t:'jw',j},{t:'jw',j}));
+    let p;do{p=opts[Math.floor(Math.random()*opts.length)];}while(bf.perch&&opts.length>1&&p.t===bf.perch.t&&(p.i??p.j)===(bf.perch.i??bf.perch.j));
+    bf.perch=p;bf.mode='toPerch';return;
+  }
+  bfWander();
+}
+function fleeFrom(x,y,now){
+  const dx=bf.x-x,dy=bf.y-y,d=Math.hypot(dx,dy)||1;
+  bf.mode='flee';bf.until=now+900;bf.tx=clamp(bf.x+dx/d*bf.S*5,bf.S,V.vw-bf.S);bf.ty=clamp(bf.y+dy/d*bf.S*4-bf.S*2,bf.S,V.vh*.8);
+  bf.vx+=dx/d*bf.S*3;bf.vy+=dy/d*bf.S*3-bf.S*2;
+}
+bfEl.addEventListener('click',()=>{
+  const now=performance.now();if(reduce){spark(bf.x,bf.y,12,{v:100,life:1000,sz:8});return;}
+  bf.mode='dance';bf.dance={t0:now,cx:bf.x,cy:bf.y,a0:Math.random()*6.283,dir:Math.random()<.5?-1:1};
+  spark(bf.x,bf.y,14,{v:120,life:1100,sz:8,g:30});
+});
+function bflyDraw(s,bob){
+  const W=bf.S,H=bf.S*.92;
+  bfEl.style.transform=`translate3d(${(bf.x-W/2).toFixed(1)}px,${(bf.y-H/2+bob).toFixed(1)}px,0) rotate(${bf.ang.toFixed(1)}deg)`;
+  bwr.setAttribute('transform',`scale(${s.toFixed(3)},1)`);bwl.setAttribute('transform',`scale(${(-s).toFixed(3)},1)`);
+}
+function bflyTick(now,dt,t){
+  const S=bf.S;
+  if(!bf.init){bf.init=true;bf.start=now+1500;bf.x=-S;bf.y=V.vh*.5;bf.tx=V.vw*.32;bf.ty=V.vh*.5;bf.mode='wander';}
+  if(reduce){const p=perchPos({t:'scene',i:0});bf.x=p[0];bf.y=p[1];bf.ang=-10;bflyDraw(.95,0);return;}
+  if(now<bf.start){bflyDraw(1,0);return;}
+  let open=null,hz=6.4;
+  const pd=Math.hypot(pX-bf.x,pY-bf.y), fast=now-pT<90&&Math.hypot(pVX,pVY)>950;
+  if(bf.mode==='dance'){
+    const d=bf.dance,q=(now-d.t0)/1800;
+    if(q>=1){bfWander();bf.ty=Math.min(bf.ty,V.vh*.4);}
+    else{
+      const a=d.a0+q*Math.PI*4*d.dir,r=S*1.15*Math.sin(Math.PI*q)+3,nx=d.cx+Math.cos(a)*r,ny=d.cy+Math.sin(a)*r*.72-q*S*.7;
+      bf.vx=(nx-bf.x)/Math.max(dt,1e-3);bf.vy=(ny-bf.y)/Math.max(dt,1e-3);bf.x=nx;bf.y=ny;hz=9;
+      if(Math.random()<dt*30) spark(bf.x,bf.y+S*.1,1,{v:35,life:1000,sz:6,g:18});
+      bf.ang=angLerp(bf.ang,Math.atan2(bf.vy,bf.vx)*57.3+90,dt*8);
+    }
+  }else if(bf.mode==='perched'){
+    const p=perchPos(bf.perch);bf.x=p[0];bf.y=p[1];bf.vx=bf.vy=0;
+    bf.ang=angLerp(bf.ang,p[2]+bf.pAng,dt*5);
+    const w=.5+.5*Math.cos(t*1.6+bf.seed);open=.3+.68*Math.pow(w,.5);
+    const tw=(t*.9+bf.seed)%5; if(tw<.35) open=.2+.8*Math.abs(Math.cos(tw*18));
+    const jd=bf.perch.t==='jw'&&JW[bf.perch.j].drag;
+    if((pd<S*1.4&&fast)||jd) fleeFrom(pX,pY,now);
+    else if(now>bf.until){bfNext(now);bf.vy=-S*2.4;bf.vx=(Math.random()-.5)*S*2.4;}
+  }else{
+    let tx2=bf.tx,ty2=bf.ty,spd=S*2.1;
+    if(bf.mode==='toPerch'){const p=perchPos(bf.perch);tx2=p[0];ty2=p[1];}
+    if(bf.mode==='flee'){spd=S*4.4;hz=9.5;if(now>bf.until) bfWander();}
+    if(bf.mode==='visit'){spd=S*1.6;}
+    const dx=tx2-bf.x,dy=ty2-bf.y,dist=Math.hypot(dx,dy)||1;
+    const near=bf.mode==='toPerch'||bf.mode==='visit'?clamp(dist/(S*1.8),.16,1):1;
+    const fl=(Math.sin(t*3.1+bf.seed)*.9+Math.sin(t*7.3+bf.seed*2)*.45)*near;
+    const dvx=(dx/dist*spd-dy/dist*fl*S*1.1)*near, dvy=(dy/dist*spd+dx/dist*fl*S*1.1)*near;
+    const kk=1-Math.exp(-dt*(bf.mode==='toPerch'&&dist<S*2.2?7:2.6));
+    bf.vx+=(dvx-bf.vx)*kk;bf.vy+=(dvy-bf.vy)*kk;
+    if(bf.x<S*.4) bf.vx+=S*9*dt; if(bf.x>V.vw-S*.4) bf.vx-=S*9*dt; if(bf.y<S*.6) bf.vy+=S*9*dt; if(bf.y>V.vh-S*.6) bf.vy-=S*9*dt;
+    bf.x+=bf.vx*dt;bf.y+=bf.vy*dt;
+    const sp=Math.hypot(bf.vx,bf.vy);
+    if(sp>S*.35) bf.ang=angLerp(bf.ang,Math.atan2(bf.vy,bf.vx)*57.3+90,dt*3);
+    if(bf.mode==='toPerch'&&dist<S*.1){
+      bf.mode='perched';bf.until=now+2600+Math.random()*3800;bf.pAng=(Math.random()-.5)*34;
+      if(bf.perch.t==='jw'){const J=JW[bf.perch.j];J.om-=clamp(bf.vx/(J.L+40)*.9,-.6,.6)+.25;}
+      spark(bf.x,bf.y+S*.15,4,{v:40,sz:5,g:20});
+    }else if(bf.mode==='visit'&&dist<S*.25){bf.mode='perched';bf.perch={t:'air',x:bf.x,y:bf.y};bf.until=now+900+Math.random()*900;}
+    else if(bf.mode==='wander'&&dist<S*.5) bfNext(now);
+    if(bf.mode!=='flee'&&pd<S*1.6&&fast) fleeFrom(pX,pY,now);
+    if(bf.vy>S*.5&&bf.mode==='wander') open=.9+.06*Math.sin(t*14);
+    bf.dust+=dt;if(bf.dust>(night?.07:.15)){bf.dust=0;spark(bf.x-bf.vx*.06,bf.y-bf.vy*.06+S*.12,1,{v:12,life:night?1400:900,sz:night?5:4,g:14});}
+  }
+  bf.ph+=dt*6.283*hz;
+  const s=open!=null?open:.14+.86*Math.pow(.5+.5*Math.cos(bf.ph),.7);
+  bflyDraw(s,open!=null?0:Math.sin(bf.ph)*S*.035);
+}
+JW.forEach(J=>{tags.push(J.lab);ro.observe(J.lab);});
+
+/* ---------- loop ---------- */
+let last=performance.now();
+function frame(now){
+  if(appOpen){sparkTick(Math.min(.05,(now-last)/1000));last=now;requestAnimationFrame(frame);return;}
+  const dt=Math.min(.05,(now-last)/1000);last=now;const t=now/1000;
+  const kk=1-Math.exp(-dt*(reduce?12:4.5));
+  cx+=(tx-cx)*kk;cy+=(ty-cy)*kk;
+  const MX=V.vw*.035,MY=V.vh*.022;
+  for(const id in layers){
+    const Ly=layers[id],x=-cx*Ly.f*MX,y=-cy*Ly.f*MY;
+    if(Math.abs(x-Ly.lx)>.05||Math.abs(y-Ly.ly)>.05){Ly.el.style.transform=`translate3d(${x.toFixed(2)}px,${y.toFixed(2)}px,0)`;Ly.lx=x;Ly.ly=y;}
+  }
+  const swing=clamp((tx-cx)*-9,-7,7);
+  titleHang.style.transform=`rotate(${swing.toFixed(2)}deg)`;
+  toggleHang.style.transform=`rotate(${(swing*.7).toFixed(2)}deg)`;
+  jewelTick(now,dt,t);bflyTick(now,dt,t);sparkTick(dt);
+  if(!reduce){
+    for(const l of leaves){
+      l.y+=l.vy*dt;l.x0+=7*dt;
+      if(l.y>V.H+40){l.y=-40;l.x0=Math.random()*V.W;}
+      if(l.x0>V.W+40) l.x0=-40;
+      const sw=Math.sin(t*l.fw+l.ph);l.rot+=l.vr*dt;
+      let fl=Math.cos(t*l.ff+l.ph*1.7);if(Math.abs(fl)<.18) fl=fl<0?-.18:.18;
+      l.el.style.transform=`translate3d(${(l.x0+sw*l.A).toFixed(1)}px,${l.y.toFixed(1)}px,0) rotate(${(l.rot+sw*25).toFixed(1)}deg) scale(${(fl*l.sc).toFixed(3)},${l.sc.toFixed(3)})`;
+    }
+    if(night||now<ffUntil){
+      for(const f of ffs){
+        const x=f.bx+Math.sin(t*f.fx*2+f.ph)*f.ax+Math.sin(t*f.fx*5.3+f.ph*2)*f.ax*.25, y=f.by+Math.cos(t*f.fy*2+f.ph)*f.ay;
+        f.el.style.transform=`translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,0)`;
+        f.el.style.opacity=(.12+.88*Math.pow(Math.max(0,Math.sin(t*f.fl+f.ph)),2)).toFixed(2);
+      }
+    }
+  }
+  requestAnimationFrame(frame);
+}
+
+build();
+requestAnimationFrame(frame);
+setTimeout(()=>root.classList.add('settled'),2600);
+if(document.fonts) document.fonts.ready.then(()=>tags.forEach(clipTag));
+let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(build,140);});
+/* ================= NEY STORE ================= */
+let appOpen=false;
+const app=document.getElementById('app');
+const FA='۰۱۲۳۴۵۶۷۸۹';
+const toFa=s=>String(s).replace(/\d/g,d=>FA[d]);
+const toEn=s=>String(s).replace(/[۰-۹]/g,d=>FA.indexOf(d)).replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d));
+const fmt=n=>toFa(Math.round(n).toLocaleString('en-US')).replace(/,/g,'٬')+' تومان';
+const ICP={search:'<circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/>',heart:'<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',
+  bag:'<path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>',home:'<path d="M4 11l8-6 8 6v9H4z"/><path d="M10 20v-5h4v5"/>',
+  grid:'<rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/>',
+  x:'<path d="M6 6l12 12M18 6L6 18"/>',plus:'<path d="M12 5v14M5 12h14"/>',minus:'<path d="M5 12h14"/>',trash:'<path d="M5 7h14M10 7V5h4v2M7 7l1 13h8l1-13"/>',
+  moon:'<path d="M19 14.5A7.5 7.5 0 0 1 9.5 5a7.5 7.5 0 1 0 9.5 9.5z"/>',sun:'<circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4L7 17M17 7l1.4-1.4"/>',
+  tree:'<path d="M12 3l5 7h-3l4 6H6l4-6H7z"/><path d="M12 16v5"/>',truck:'<path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/>',
+  shield:'<path d="M12 3l7 3v5c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/>',refresh:'<path d="M4 12a8 8 0 0 1 14-5.3L20 9M20 4v5h-5M20 12a8 8 0 0 1-14 5.3L4 15M4 20v-5h5"/>',
+  chev:'<path d="M14 6l-6 6 6 6"/>',check:'<path d="M5 12l4.5 4.5L19 7"/>',gift:'<rect x="4" y="9" width="16" height="11" rx="1"/><path d="M4 13h16M12 9v11M12 9c-2-4-6-3-5 0M12 9c2-4 6-3 5 0"/>',
+  hand:'<path d="M7 11V6.5a1.5 1.5 0 0 1 3 0V11M10 10V5a1.5 1.5 0 0 1 3 0v5M13 10V6a1.5 1.5 0 0 1 3 0v6M16 9.5a1.5 1.5 0 0 1 3 0V14a6 6 0 0 1-6 6h-1a6 6 0 0 1-5.2-3L5 13.5a1.5 1.5 0 0 1 2.4-1.8L9 13"/>'};
+const ic=n=>`<svg viewBox="0 0 24 24" aria-hidden="true">${ICP[n]}</svg>`;
+
+const CAT={rings:'انگشتر',necklaces:'گردنبند',earrings:'گوشواره',bracelets:'دستبند'};
+const CATD={rings:'حلقه‌ها و انگشترهایی با نگین آویخته، مثل قطره‌ای که از برگ می‌چکد.',necklaces:'آویزهای برگ نی؛ نشانه NEY، روی زنجیرهای ظریف کابلی.',earrings:'گوشواره‌های قطره‌ای سبک با قاب طلا و مروارید پرورشی.',bracelets:'النگوهای ظریف با نگین‌های ردیفی، برای هر روز و هر مهمانی.'};
+const GOLD={y:'زرد',r:'رزگلد',w:'سفید'}, GEM={dia:'الماس',ruby:'یاقوت',em:'زمرد'};
+const TYPE={rings:'ring',necklaces:'neck',earrings:'ear',bracelets:'brace'};
+const DESC={ring:'حلقه‌ای ظریف از طلای ۱۸ عیار با نگینی که مثل قطره شبنم از آن آویخته است. تمام مراحل ساخت، از ریخته‌گری تا نشاندن نگین، با دست در کارگاه NEY انجام می‌شود.',
+  neck:'آویزی به شکل برگ نی — نشانه برند NEY — با نگین کابوشن، روی زنجیر کابلی ظریف. سبک، روزمره و ماندگار.',
+  ear:'گوشواره قطره‌ای با قاب طلای ۱۸ عیار، نگین تراش‌خورده و یک مروارید پرورشی کوچک که با هر حرکت تاب می‌خورد.',
+  brace:'النگوی سبک با سه نگین در جلو. لبه‌های داخلی صیقلی و گرد شده‌اند تا استفاده روزانه راحت باشد.'};
+const P=[
+  {id:1,cat:'rings',name:'حلقه سولیتر نی',gem:'dia',gold:'y',price:48500000,wt:3.2,tag:'پرفروش',d:1},
+  {id:2,cat:'rings',name:'حلقه یاقوت شب',gem:'ruby',gold:'r',price:36800000,wt:2.9,tag:'جدید',d:9},
+  {id:3,cat:'rings',name:'انگشتر زمرد جنگل',gem:'em',gold:'y',price:41200000,wt:3.4,d:5},
+  {id:4,cat:'necklaces',name:'گردنبند برگ نی',gem:'ruby',gold:'y',price:52900000,wt:4.1,tag:'نشان برند',d:2},
+  {id:5,cat:'necklaces',name:'گردنبند برگ نی زمرد',gem:'em',gold:'w',price:54300000,wt:4.1,d:7},
+  {id:6,cat:'necklaces',name:'آویز قطره الماس',gem:'dia',gold:'r',price:61500000,wt:4.6,tag:'جدید',d:10},
+  {id:7,cat:'earrings',name:'گوشواره قطره زمرد',gem:'em',gold:'y',price:33900000,wt:2.6,tag:'پرفروش',d:3},
+  {id:8,cat:'earrings',name:'گوشواره قطره یاقوت',gem:'ruby',gold:'r',price:32400000,wt:2.6,d:8},
+  {id:9,cat:'earrings',name:'گوشواره شبنم',gem:'dia',gold:'w',price:38700000,wt:2.8,d:11},
+  {id:10,cat:'bracelets',name:'النگو سه‌نگین',gem:'dia',gold:'y',price:69800000,wt:7.4,tag:'پرفروش',d:4},
+  {id:11,cat:'bracelets',name:'النگو یاقوت پاییز',gem:'ruby',gold:'r',price:64200000,wt:7.1,d:12},
+  {id:12,cat:'bracelets',name:'النگو زمرد',gem:'em',gold:'w',price:66500000,wt:7.2,tag:'جدید',d:6},
+].map(p=>({...p,t:TYPE[p.cat]}));
+const byId=id=>P.find(p=>p.id===id);
+const SJ={ring:JW[1],neck:JW[0],ear:JW[2],brace:{id:'brace',seed:304,w:100,h:76}};
+const svgC={};
+const jsvg=t=>svgC[t]||(svgC[t]=jewelSVG(SJ[t]).replace('<svg ','<svg preserveAspectRatio="xMidYMin meet" '));
+const pimg=(p,gold,cls='',dl)=>`<div class="s-img gd-${gold||p.gold} gm-${p.gem} ${cls}" data-t="${p.t}"><div class="s-hang" style="--dl:${dl??-(p.id*.7)%6}s"><span class="s-thr"></span><div class="s-jw">${jsvg(p.t)}</div></div></div>`;
+
+/* state */
+const LS={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d;}catch(e){return d;}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}};
+let cart=LS.get('ney-cart',[]), wish=new Set(LS.get('ney-wish',[])), lastOrder=null;
+const F={cat:'all',gold:null,gem:null,sort:'rec'};
+let pd=null;
+const save=()=>{LS.set('ney-cart',cart);LS.set('ney-wish',[...wish]);};
+const defOpt=p=>p.t==='ring'?'۵۲':p.t==='neck'?'۴۵ سانتی‌متر':p.t==='brace'?'متوسط':'—';
+const OPTS={ring:['۴۸','۵۰','۵۲','۵۴','۵۶','۵۸'],neck:['۴۲ سانتی‌متر','۴۵ سانتی‌متر','۵۰ سانتی‌متر'],brace:['کوچک','متوسط','بزرگ']};
+const OPTN={ring:'سایز انگشت',neck:'طول زنجیر',brace:'اندازه'};
+function addCart(id,gold,opt,qty=1){
+  const p=byId(id),key=`${id}|${gold}|${opt}`,it=cart.find(c=>c.key===key);
+  if(it) it.qty=Math.min(9,it.qty+qty); else cart.push({key,id,gold,opt,qty});
+  save();counts(true);toast(`«${p.name}» به سبد خرید اضافه شد`);
+}
+const sub=()=>cart.reduce((a,c)=>a+byId(c.id).price*c.qty,0);
+const FREE=50000000;
+function counts(b){
+  const n=cart.reduce((a,c)=>a+c.qty,0),w=wish.size;
+  app.querySelectorAll('[data-cc=cart]').forEach(e=>{e.textContent=toFa(n);e.classList.toggle('on',n>0);if(b){e.classList.remove('bump');void e.offsetWidth;e.classList.add('bump');}});
+  app.querySelectorAll('[data-cc=wish]').forEach(e=>{e.textContent=toFa(w);e.classList.toggle('on',w>0);});
+}
+let tt;function toast(m){const t=document.getElementById('sToast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),2400);}
+const burst=el=>{const r=el.getBoundingClientRect();spark(r.left+r.width/2,r.top+r.height/2,14,{v:130,life:1000,sz:8,g:40});};
+
+/* views */
+const sv=()=>document.getElementById('sv');
+function card(p){
+  const w=wish.has(p.id);
+  return `<article class="s-card"><a href="#p/${p.id}" aria-label="${p.name}">${pimg(p)}</a>${p.tag?`<span class="s-badge">${p.tag}</span>`:''}
+  <button class="s-wish ${w?'on':''}" data-act="wish" data-id="${p.id}" aria-pressed="${w}" aria-label="علاقه‌مندی">${ic('heart')}</button>
+  <button class="s-quick" data-act="quick" data-id="${p.id}">افزودن سریع به سبد</button>
+  <div class="s-card-b"><a href="#p/${p.id}"><h3>${p.name}</h3></a><p>${GEM[p.gem]} · طلای ${GOLD[p.gold]} ۱۸ عیار</p><div class="s-price">${fmt(p.price)}</div></div></article>`;
+}
+function footer(){return `<footer class="s-ft"><div class="s-wrap"><div class="s-ft-g">
+  <div><a class="s-logo" href="#shop"><b>NEY</b></a><p style="margin-top:12px;max-width:22rem">طلا و جواهر دست‌ساز؛ الهام‌گرفته از جنگل، ساخته‌شده برای ماندن. همه قطعات از طلای ۱۸ عیار با شناسنامه و ضمانت اصالت.</p></div>
+  <div><h5>فروشگاه</h5><ul>${Object.keys(CAT).map(c=>`<li><a href="#shop/${c}">${CAT[c]}</a></li>`).join('')}</ul></div>
+  <div><h5>راهنما</h5><ul><li><a href="#shop/rings">راهنمای سایز</a></li><li><a href="#shop">ارسال و بازگشت</a></li><li><a href="#shop">مراقبت از جواهر</a></li></ul></div>
+  <div><h5>NEY</h5><ul><li><a href="#home">جنگل NEY</a></li><li><a href="#wish">علاقه‌مندی‌ها</a></li><li><a href="#shop">درباره ما</a></li></ul></div>
+  </div><div class="s-ft-b"><span>© ${toFa(1405)} NEY · تمامی حقوق محفوظ است.</span><span>پاسخگویی: شنبه تا پنجشنبه، ${toFa(10)} تا ${toFa(19)}</span></div></div></footer>`;}
+function feats(){return `<div class="s-feats">
+  <div class="s-feat">${ic('shield')}<b>ضمانت اصالت</b><span>شناسنامه و فاکتور رسمی برای هر قطعه</span></div>
+  <div class="s-feat">${ic('truck')}<b>ارسال بیمه‌شده</b><span>رایگان برای سفارش‌های بالای ۵۰ میلیون تومان</span></div>
+  <div class="s-feat">${ic('refresh')}<b>۷ روز بازگشت</b><span>تعویض سایز و بازگشت بدون پرسش</span></div></div>`;}
+function renderHome(){
+  const best=P.filter(p=>p.tag==='پرفروش'||p.id===4).slice(0,4);
+  const neu=[...P].sort((a,b)=>b.d-a.d).slice(0,4);
+  const h=[[1,'38%','17%',.95,-1],[4,'14%','40%',1.25,-3],[7,'60%','28%',.9,-2]];
+  sv().innerHTML=`<div class="s-view"><section class="s-wrap s-hero">
+   <div><span class="s-eye">کالکشن پاییز ${toFa(1405)}</span><h1>زیورهای <i>جنگل طلایی</i></h1>
+   <p>قطعه‌هایی سبک و دست‌ساز از طلای ۱۸ عیار؛ هر کدام آویخته از نخی نازک، مثل برگی که در نسیم می‌رقصد.</p>
+   <div class="s-row"><a class="s-btn" href="#shop/all">خرید کالکشن</a><a class="s-btn ghost" href="#shop/necklaces">برگ نی، نشان NEY</a></div>
+   <div class="s-stats"><div><b>${toFa(18)} عیار</b>طلای استاندارد</div><div><b>${toFa(100)}٪</b>دست‌ساز</div><div><b>${toFa(7)} روز</b>ضمانت بازگشت</div></div></div>
+   <div class="s-art" data-act="spinart">${h.map(([id,x,len,sc,dl])=>{const p=byId(id),J=SJ[p.t];return `<div class="s-hh gd-${p.gold} gm-${p.gem}" style="left:${x};animation-delay:${dl}s"><span style="height:${len.replace('%','cqh')}"></span><svg style="width:${(J.w*.3*sc).toFixed(1)}cqw;height:${(J.h*.3*sc).toFixed(1)}cqw" viewBox="${-J.w/2} 0 ${J.w} ${J.h}">${jsvg(p.t).replace(/^<svg[^>]*>/,'').replace(/<\/svg>$/,'')}</svg></div>`;}).join('')}
+   <div class="s-art-tag"><b>گردنبند برگ نی</b>${fmt(52900000)}</div></div></section>
+   <section class="s-wrap s-sec" style="padding-top:24px"><div class="s-head"><div><span class="s-eye">دسته‌بندی‌ها</span><h2 class="s-h2">برای هر لحظه، یک درخشش</h2></div><a class="s-link" href="#shop/all">همه محصولات</a></div>
+   <div class="s-cats">${Object.keys(CAT).map((c,i)=>{const p=P.find(q=>q.cat===c);return `<a class="s-cat" href="#shop/${c}">${pimg(p,null,'',-i*1.3)}<div><b>${CAT[c]}</b><small>${toFa(P.filter(q=>q.cat===c).length)} مدل</small></div></a>`;}).join('')}</div></section>
+   <section class="s-wrap s-sec" style="padding-top:0"><div class="s-head"><div><span class="s-eye">محبوب‌ترین‌ها</span><h2 class="s-h2">پرفروش‌های NEY</h2></div><a class="s-link" href="#shop/all">مشاهده همه</a></div>
+   <div class="s-grid">${best.map(card).join('')}</div></section>
+   <section class="s-wrap"><div class="s-story"><div><span class="s-eye">داستان NEY</span><h2 class="s-h2">از نی، تا نگین</h2>
+   <p>«نی» در زبان ما نماد نغمه و ریشه است. NEY از همین ایده زاده شد: جواهری سبک که مثل برگی از نی، با هر حرکت تاب بخورد. هر قطعه در کارگاه ما طراحی، ریخته‌گری و با دست پرداخت می‌شود.</p>
+   <a class="s-btn ghost" style="margin-top:24px" href="#home">${ic('tree')} سفر به جنگل NEY</a></div>${feats()}</div></section>
+   <section class="s-wrap s-sec"><div class="s-head"><div><span class="s-eye">تازه‌ها</span><h2 class="s-h2">تازه‌های کالکشن پاییز</h2></div><a class="s-link" href="#shop/all">مشاهده همه</a></div>
+   <div class="s-grid">${neu.map(card).join('')}</div></section>
+   <section class="s-wrap s-sec" style="padding-top:0"><div class="s-news"><span class="s-eye">خبرنامه</span><h2 class="s-h2">اولین نفری باشید که می‌بیند</h2><p>کالکشن‌های تازه و رونمایی‌های محدود را زودتر از همه دریافت کنید.</p>
+   <form data-form="news" novalidate><label class="s-field"><input type="email" required placeholder="ایمیل شما" aria-label="ایمیل" dir="ltr" style="text-align:right"><em>ایمیل معتبر وارد کنید</em></label><button class="s-btn" type="submit">عضویت</button></form></div></section>
+   ${footer()}</div>`;
+}
+function listItems(){
+  let a=P.filter(p=>(F.cat==='all'||p.cat===F.cat)&&(!F.gold||p.gold===F.gold)&&(!F.gem||p.gem===F.gem));
+  if(F.sort==='low') a.sort((x,y)=>x.price-y.price); else if(F.sort==='high') a.sort((x,y)=>y.price-x.price); else if(F.sort==='new') a.sort((x,y)=>y.d-x.d); else a.sort((x,y)=>x.d-y.d);
+  return a;
+}
+function renderGrid(){
+  const a=listItems(),g=document.getElementById('sGrid');if(!g) return;
+  document.getElementById('sCnt').textContent=`${toFa(a.length)} محصول`;
+  g.innerHTML=a.length?`<div class="s-grid">${a.map(card).join('')}</div>`:`<div class="s-empty">${ic('search')}<p>محصولی با این فیلترها پیدا نشد.</p><button class="s-btn ghost" data-act="reset">حذف فیلترها</button></div>`;
+}
+function renderList(cat){
+  F.cat=CAT[cat]?cat:'all';
+  const title=F.cat==='all'?'همه محصولات':CAT[F.cat], d=F.cat==='all'?'کالکشن کامل NEY؛ طلای ۱۸ عیار، دست‌ساز و دارای ضمانت اصالت.':CATD[F.cat];
+  sv().innerHTML=`<div class="s-view"><div class="s-wrap"><div class="s-lhead"><span class="s-eye">فروشگاه</span><h1>${title}</h1><p>${d}</p></div>
+  <div class="s-chips" role="tablist"><a class="s-chip ${F.cat==='all'?'on':''}" href="#shop/all" style="display:inline-flex;align-items:center">همه</a>${Object.keys(CAT).map(c=>`<a class="s-chip ${F.cat===c?'on':''}" href="#shop/${c}" style="display:inline-flex;align-items:center">${CAT[c]}</a>`).join('')}</div>
+  <div class="s-bar"><div class="s-fl"><div class="s-g"><span>رنگ طلا</span>${Object.keys(GOLD).map(g=>`<button class="s-sw ${F.gold===g?'on':''}" data-act="fgold" data-v="${g}" aria-label="طلای ${GOLD[g]}" title="${GOLD[g]}"></button>`).join('')}</div>
+  <div class="s-g"><span>نگین</span>${Object.keys(GEM).map(g=>`<button class="s-chip ${F.gem===g?'on':''}" style="height:32px;padding:0 12px" data-act="fgem" data-v="${g}">${GEM[g]}</button>`).join('')}</div></div>
+  <div class="s-g" style="display:flex;align-items:center;gap:12px"><span class="s-cnt" id="sCnt"></span><select class="s-sel" data-act="sort" aria-label="مرتب‌سازی">
+  ${[['rec','پیشنهاد NEY'],['new','جدیدترین'],['low','ارزان‌ترین'],['high','گران‌ترین']].map(([v,l])=>`<option value="${v}" ${F.sort===v?'selected':''}>${l}</option>`).join('')}</select></div></div>
+  <div id="sGrid"></div></div><div style="height:72px"></div>${footer()}</div>`;
+  renderGrid();
+}
+function renderPDP(id){
+  const p=byId(id);if(!p){renderList('all');return;}
+  if(!pd||pd.id!==id) pd={id,gold:p.gold,opt:defOpt(p),qty:1};
+  const w=wish.has(id), rel=P.filter(q=>q.cat===p.cat&&q.id!==id).concat(P.filter(q=>q.cat!==p.cat&&q.gem===p.gem)).slice(0,4);
+  const opts=OPTS[p.t];
+  sv().innerHTML=`<div class="s-view"><div class="s-wrap">
+  <nav class="s-crumb"><a href="#shop">فروشگاه</a>${ic('chev').replace('<svg','<svg width="14" height="14" style="fill:none;stroke:currentColor;stroke-width:1.6"')}<a href="#shop/${p.cat}">${CAT[p.cat]}</a>${ic('chev').replace('<svg','<svg width="14" height="14" style="fill:none;stroke:currentColor;stroke-width:1.6"')}<span>${p.name}</span></nav>
+  <div class="s-pdp"><div class="s-pdp-img"><div id="pImg" data-act="spin" role="button" tabindex="0" aria-label="چرخاندن جواهر">${pimg(p,pd.gold,'',0)}</div><p class="s-pdp-note">برای چرخاندن جواهر، رویش بزنید</p></div>
+  <div class="s-info">${p.tag?`<span class="s-eye">${p.tag}</span>`:`<span class="s-eye">${CAT[p.cat]}</span>`}<h1>${p.name}</h1>
+  <p class="s-sub">${GEM[p.gem]} · طلای ۱۸ عیار · وزن تقریبی ${toFa(p.wt)} گرم</p><div class="s-price">${fmt(p.price)}</div>
+  <p class="s-desc">${DESC[p.t]}</p>
+  <div class="s-opt"><h4>رنگ طلا <span id="pGoldN">${GOLD[pd.gold]}</span></h4><div class="s-chips">${Object.keys(GOLD).map(g=>`<button class="s-sw ${pd.gold===g?'on':''}" data-act="pgold" data-v="${g}" aria-label="طلای ${GOLD[g]}"></button>`).join('')}</div></div>
+  ${opts?`<div class="s-opt"><h4>${OPTN[p.t]}${p.t==='ring'?' <span>راهنمای سایز در پایین صفحه</span>':''}</h4><div class="s-chips">${opts.map(o=>`<button class="s-chip ${pd.opt===o?'on':''}" data-act="popt" data-v="${o}">${o}</button>`).join('')}</div></div>`:''}
+  <div class="s-buy"><div class="s-qty"><button data-act="pq" data-v="1" aria-label="افزایش">${ic('plus')}</button><b id="pQ">${toFa(pd.qty)}</b><button data-act="pq" data-v="-1" aria-label="کاهش">${ic('minus')}</button></div>
+  <button class="s-btn" data-act="padd">${ic('bag')} افزودن به سبد</button><button class="s-wbig ${w?'on':''}" data-act="wish" data-id="${id}" aria-pressed="${w}" aria-label="علاقه‌مندی">${ic('heart')}</button></div>
+  <div class="s-trust"><div>${ic('shield')}ضمانت اصالت</div><div>${ic('truck')}ارسال بیمه‌شده</div><div>${ic('gift')}بسته‌بندی هدیه</div></div>
+  <div class="s-acc"><details open><summary>مشخصات</summary><div class="s-accb"><dl class="s-spec"><dt>جنس</dt><dd>طلای ۱۸ عیار (۷۵۰)</dd><dt>نگین</dt><dd>${GEM[p.gem]}${p.t==='ear'?' و مروارید پرورشی':''}</dd><dt>وزن تقریبی</dt><dd>${toFa(p.wt)} گرم</dd><dt>کد محصول</dt><dd>NEY-${toFa(String(p.id).padStart(3,'0'))}</dd></dl></div></details>
+  ${p.t==='ring'?`<details><summary>راهنمای سایز</summary><div class="s-accb">نخی را دور انگشت بپیچید و طول آن را بر حسب میلی‌متر اندازه بگیرید؛ این عدد سایز شماست (مثلاً ۵۲ میلی‌متر = سایز ۵۲). اگر بین دو سایز بودید، سایز بزرگ‌تر را انتخاب کنید. تعویض سایز تا ۷ روز رایگان است.</div></details>`:''}
+  <details><summary>ارسال و بازگشت</summary><div class="s-accb">ارسال بیمه‌شده به سراسر کشور در ۲ تا ۴ روز کاری؛ برای سفارش‌های بالای ۵۰ میلیون تومان رایگان است. تا ۷ روز امکان بازگشت یا تعویض وجود دارد.</div></details>
+  <details><summary>نگهداری</summary><div class="s-accb">پیش از استفاده از عطر و کرم، جواهر را درآورید. با پارچه نرم تمیز کنید و هر قطعه را جداگانه در جعبه NEY نگه دارید.</div></details></div></div></div>
+  <section class="s-sec"><div class="s-head"><div><span class="s-eye">پیشنهاد ما</span><h2 class="s-h2">شاید این‌ها را هم دوست داشته باشید</h2></div></div><div class="s-grid">${rel.map(card).join('')}</div></section></div>${footer()}</div>`;
+}
+function renderWish(){
+  const a=P.filter(p=>wish.has(p.id));
+  sv().innerHTML=`<div class="s-view"><div class="s-wrap"><div class="s-lhead"><span class="s-eye">فهرست شما</span><h1>علاقه‌مندی‌ها</h1></div>
+  ${a.length?`<div class="s-grid">${a.map(card).join('')}</div>`:`<div class="s-empty">${ic('heart')}<p>هنوز چیزی به علاقه‌مندی‌ها اضافه نکرده‌اید.</p><a class="s-btn" href="#shop/all">گشتی در فروشگاه</a></div>`}</div><div style="height:72px"></div>${footer()}</div>`;
+}
+function shipCost(m){return m==='courier'?450000:(sub()>=FREE?0:350000);}
+function sumBox(m='post'){
+  const s=sub(),sh=shipCost(m);
+  return `<div class="s-box"><h3>خلاصه سفارش</h3>${cart.map(c=>{const p=byId(c.id);return `<div class="s-line">${pimg(p,c.gold,'mini',0)}<div class="s-li"><b>${p.name}</b><small>طلای ${GOLD[c.gold]}${c.opt!=='—'?' · '+c.opt:''} · ${toFa(c.qty)} عدد</small></div><span style="font-size:.85rem">${fmt(p.price*c.qty)}</span></div>`;}).join('')}
+  <div style="margin-top:14px"><div class="s-tot"><span>جمع کالاها</span><span>${fmt(s)}</span></div><div class="s-tot"><span>هزینه ارسال</span><span>${sh?fmt(sh):'رایگان'}</span></div>
+  <div class="s-tot big"><span>مبلغ قابل پرداخت</span><span>${fmt(s+sh)}</span></div></div></div>`;
+}
+function renderCheckout(){
+  if(!cart.length){sv().innerHTML=`<div class="s-view"><div class="s-wrap"><div class="s-empty">${ic('bag')}<p>سبد خرید شما خالی است.</p><a class="s-btn" href="#shop/all">مشاهده محصولات</a></div></div>${footer()}</div>`;return;}
+  const fld=(n,l,t='text',w='',ph='',err='')=>`<label class="s-field ${w}"><span>${l}</span>${t==='area'?`<textarea name="${n}" placeholder="${ph}"></textarea>`:`<input name="${n}" type="${t}" placeholder="${ph}" ${t==='tel'?'inputmode="numeric" dir="ltr" style="text-align:right"':''}>`}<em>${err}</em></label>`;
+  sv().innerHTML=`<div class="s-view"><div class="s-wrap"><h1 class="s-co-h" style="font-size:clamp(1.5rem,1.1rem + 1.6vw,2.2rem);font-weight:500;padding:28px 0 0">تکمیل خرید</h1>
+  <form class="s-co" data-form="co" novalidate><div>
+  <div class="s-box"><h3><i>${toFa(1)}</i>اطلاعات گیرنده</h3><div class="s-fg">${fld('name','نام و نام خانوادگی','text','','','نام را کامل وارد کنید')}${fld('phone','شماره موبایل','tel','','۰۹۱۲۳۴۵۶۷۸۹','شماره موبایل معتبر نیست')}
+  ${fld('city','استان و شهر','text','','تهران، تهران','شهر را وارد کنید')}${fld('zip','کد پستی (اختیاری)','tel')}${fld('addr','نشانی کامل','area','w','','نشانی را کامل‌تر بنویسید')}</div></div>
+  <div class="s-box"><h3><i>${toFa(2)}</i>روش ارسال</h3>
+  <label class="s-radio"><input type="radio" name="ship" value="post" checked><span>پست پیشتاز بیمه‌شده<small>۲ تا ۴ روز کاری · سراسر کشور</small></span><b style="font-weight:500;font-size:.85rem">${sub()>=FREE?'رایگان':fmt(350000)}</b></label>
+  <label class="s-radio"><input type="radio" name="ship" value="courier"><span>پیک ویژه NEY<small>تحویل همان روز · فقط تهران</small></span><b style="font-weight:500;font-size:.85rem">${fmt(450000)}</b></label>
+  <label class="s-radio"><input type="checkbox" name="gift"><span>بسته‌بندی هدیه<small>جعبه چوبی NEY با کارت دست‌نویس · رایگان</small></span>${ic('gift').replace('<svg','<svg width="22" height="22" style="fill:none;stroke:var(--s-gold);stroke-width:1.5"')}</label></div>
+  <div class="s-box"><h3><i>${toFa(3)}</i>روش پرداخت</h3>
+  <label class="s-radio"><input type="radio" name="pay" value="online" checked><span>پرداخت اینترنتی<small>از طریق درگاه امن بانکی</small></span></label>
+  <label class="s-radio"><input type="radio" name="pay" value="card"><span>کارت به کارت<small>شماره کارت پس از ثبت سفارش نمایش داده می‌شود</small></span></label></div></div>
+  <div class="s-sum"><div id="sSum">${sumBox()}</div><button class="s-btn full" type="submit" style="margin-top:16px">ثبت سفارش و پرداخت</button><p class="s-demo">نسخه نمایشی — پرداخت واقعی انجام نمی‌شود.</p></div></form></div>${footer()}</div>`;
+}
+function renderDone(){
+  if(!lastOrder){renderHome();return;}
+  sv().innerHTML=`<div class="s-view"><div class="s-wrap"><div class="s-done"><div class="s-ok">${ic('check')}</div><h1>سفارش شما ثبت شد</h1>
+  <p>${lastOrder.name} عزیز، از خرید شما سپاسگزاریم. کد پیگیری سفارش: <b style="color:var(--s-ink)">${lastOrder.code}</b></p>
+  <p>مبلغ ${fmt(lastOrder.total)} · ارسال با ${lastOrder.ship==='courier'?'پیک ویژه NEY':'پست پیشتاز بیمه‌شده'}</p>
+  <div class="s-row"><a class="s-btn" href="#shop">بازگشت به فروشگاه</a><a class="s-btn ghost" href="#home">${ic('tree')} جنگل NEY</a></div></div></div>${footer()}</div>`;
+  const ok=sv().querySelector('.s-ok');setTimeout(()=>burst(ok),350);
+}
+function renderCart(){
+  const b=document.getElementById('sDb'),f=document.getElementById('sDf'),s=sub();
+  document.getElementById('sDn').textContent=`سبد خرید (${toFa(cart.reduce((a,c)=>a+c.qty,0))})`;
+  if(!cart.length){b.innerHTML=`<div class="s-empty">${ic('bag')}<p>سبد خرید شما خالی است.</p><a class="s-btn" href="#shop/all" data-act="closecart">شروع خرید</a></div>`;f.innerHTML='';return;}
+  b.innerHTML=cart.map(c=>{const p=byId(c.id);return `<div class="s-line"><a href="#p/${p.id}" data-act="closecart">${pimg(p,c.gold,'mini',0)}</a><div class="s-li"><b>${p.name}</b><small>طلای ${GOLD[c.gold]}${c.opt!=='—'?' · '+c.opt:''}</small>
+  <div class="s-lr"><div class="s-qty sm"><button data-act="cq" data-k="${c.key}" data-v="1" aria-label="افزایش">${ic('plus')}</button><b>${toFa(c.qty)}</b><button data-act="cq" data-k="${c.key}" data-v="-1" aria-label="کاهش">${ic('minus')}</button></div>
+  <span>${fmt(p.price*c.qty)}</span><button class="s-rm" data-act="rm" data-k="${c.key}" aria-label="حذف">${ic('trash')}</button></div></div></div>`;}).join('');
+  const left=FREE-s;
+  f.innerHTML=`<div class="s-prog">${left>0?`فقط ${fmt(left)} تا ارسال رایگان`:'ارسال بیمه‌شده برای شما رایگان است ✓'}<i style="--p:${Math.min(100,s/FREE*100)}%"></i></div>
+  <div class="s-tot big"><span>جمع کل</span><span>${fmt(s)}</span></div><a class="s-btn full" href="#checkout" data-act="closecart">ادامه و تکمیل خرید</a>`;
+}
+function openCart(){renderCart();document.getElementById('sOv').classList.add('open');document.getElementById('sDr').classList.add('open');}
+function closeCart(){document.getElementById('sOv').classList.remove('open');document.getElementById('sDr').classList.remove('open');}
+function openSearch(){const s=document.getElementById('sSr');s.classList.add('open');const i=s.querySelector('input');i.value='';doSearch('');setTimeout(()=>i.focus(),300);}
+function closeSearch(){document.getElementById('sSr').classList.remove('open');}
+function doSearch(q){
+  q=q.trim();const r=document.getElementById('sSres');
+  const a=q?P.filter(p=>(p.name+' '+CAT[p.cat]+' '+GEM[p.gem]+' '+GOLD[p.gold]).includes(q)):P.filter(p=>p.tag);
+  r.innerHTML=a.length?a.slice(0,8).map(p=>`<a href="#p/${p.id}" data-act="closesearch">${pimg(p,null,'mini',0)}<span>${p.name}<small>${fmt(p.price)}</small></span></a>`).join(''):`<p style="color:var(--s-ink2);font-size:.88rem;padding:8px">نتیجه‌ای پیدا نشد.</p>`;
+}
+function themeIc(){app.querySelectorAll('[data-act=theme]').forEach(b=>b.innerHTML=ic(night?'sun':'moon'));}
+
+/* shell */
+app.innerHTML=`<header class="s-hd"><div class="s-wrap s-hd-in"><a class="s-logo" href="#shop"><b>NEY</b><small>طلا و جواهر دست‌ساز</small></a>
+ <nav class="s-nav" aria-label="دسته‌بندی‌ها"><a href="#shop" data-nav="shop">خانه</a><a href="#shop/all" data-nav="all">همه</a>${Object.keys(CAT).map(c=>`<a href="#shop/${c}" data-nav="${c}">${CAT[c]}</a>`).join('')}</nav>
+ <div class="s-acts"><a class="s-back" href="#home" title="بازگشت به جنگل NEY">${ic('tree')}<span>جنگل NEY</span></a>
+ <button class="s-ic" data-act="search" aria-label="جستجو">${ic('search')}</button><button class="s-ic" data-act="theme" aria-label="تغییر حالت روز و شب"></button>
+ <a class="s-ic s-hide-m" href="#wish" aria-label="علاقه‌مندی‌ها">${ic('heart')}<span class="s-cc" data-cc="wish"></span></a>
+ <button class="s-ic" data-act="cart" aria-label="سبد خرید">${ic('bag')}<span class="s-cc" data-cc="cart"></span></button></div></div></header>
+ <main id="sv"></main>
+ <nav class="s-tabs" aria-label="منوی پایین"><a href="#shop" data-nav="shop">${ic('home')}خانه</a><a href="#shop/all" data-nav="all">${ic('grid')}فروشگاه</a>
+ <a href="#wish" data-nav="wish">${ic('heart')}علاقه‌مندی<span class="s-cc" data-cc="wish"></span></a><button data-act="cart">${ic('bag')}سبد خرید<span class="s-cc" data-cc="cart"></span></button></nav>
+ <div class="s-ov" id="sOv" data-act="closecart"></div>
+ <aside class="s-drawer" id="sDr" aria-label="سبد خرید"><div class="s-dh"><b id="sDn">سبد خرید</b><button class="s-ic" data-act="closecart" aria-label="بستن">${ic('x')}</button></div><div class="s-db" id="sDb"></div><div class="s-df" id="sDf"></div></aside>
+ <div class="s-search" id="sSr"><div class="s-wrap"><div class="s-sbox">${ic('search')}<input type="search" placeholder="جستجو در NEY؛ مثلاً «زمرد» یا «انگشتر»" aria-label="جستجو"><button class="s-ic" data-act="closesearch" aria-label="بستن">${ic('x')}</button></div><div class="s-sres" id="sSres"></div></div></div>
+ <div class="s-toast" id="sToast" role="status" aria-live="polite"></div>`;
+themeIc();counts();
+
+app.addEventListener('click',e=>{
+  const t=e.target.closest('[data-act]');if(!t) return;
+  const a=t.dataset.act,id=+t.dataset.id,v=t.dataset.v;
+  if(a==='cart'){openCart();}
+  else if(a==='closecart'){closeCart();}
+  else if(a==='search'){openSearch();}
+  else if(a==='closesearch'){closeSearch();}
+  else if(a==='theme'){setNight(!night);themeIc();}
+  else if(a==='wish'){e.preventDefault();const on=!wish.has(id);on?wish.add(id):wish.delete(id);save();counts();
+    app.querySelectorAll(`[data-act=wish][data-id="${id}"]`).forEach(b=>{b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);});
+    if(on){burst(t);toast('به علاقه‌مندی‌ها اضافه شد');} if(location.hash==='#wish') renderWish();}
+  else if(a==='quick'){const p=byId(id);addCart(id,p.gold,defOpt(p));burst(t);}
+  else if(a==='fgold'){F.gold=F.gold===v?null:v;t.parentNode.querySelectorAll('.s-sw').forEach(b=>b.classList.toggle('on',b.dataset.v===F.gold));renderGrid();}
+  else if(a==='fgem'){F.gem=F.gem===v?null:v;t.parentNode.querySelectorAll('.s-chip').forEach(b=>b.classList.toggle('on',b.dataset.v===F.gem));renderGrid();}
+  else if(a==='reset'){F.gold=F.gem=null;renderList(F.cat);}
+  else if(a==='pgold'){pd.gold=v;t.parentNode.querySelectorAll('.s-sw').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+    const im=document.querySelector('#pImg .s-img');im.className=im.className.replace(/gd-\w/,'gd-'+v);document.getElementById('pGoldN').textContent=GOLD[v];}
+  else if(a==='popt'){pd.opt=v;t.parentNode.querySelectorAll('.s-chip').forEach(b=>b.classList.toggle('on',b===t));}
+  else if(a==='pq'){pd.qty=clamp(pd.qty+(+v),1,9);document.getElementById('pQ').textContent=toFa(pd.qty);}
+  else if(a==='padd'){addCart(pd.id,pd.gold,pd.opt,pd.qty);burst(t);}
+  else if(a==='spin'){const j=t.querySelector('.s-jw');j.classList.remove('spin');void j.offsetWidth;j.classList.add('spin');burst(j);}
+  else if(a==='spinart'){const hs=t.querySelectorAll('.s-hh svg');const h=hs[Math.floor(Math.random()*hs.length)];h.style.animation='none';void h.offsetWidth;h.style.animation='spinY 1.4s var(--out)';burst(h);}
+  else if(a==='cq'){const c=cart.find(x=>x.key===t.dataset.k);if(c){c.qty+= +v;if(c.qty<1) cart=cart.filter(x=>x!==c);else c.qty=Math.min(9,c.qty);}save();counts();renderCart();}
+  else if(a==='rm'){cart=cart.filter(x=>x.key!==t.dataset.k);save();counts();renderCart();toast('از سبد خرید حذف شد');}
+});
+app.addEventListener('keydown',e=>{if(e.key==='Escape'){closeCart();closeSearch();} if((e.key==='Enter'||e.key===' ')&&e.target.id==='pImg'){e.preventDefault();e.target.click();}});
+app.addEventListener('change',e=>{
+  if(e.target.matches('[data-act=sort]')){F.sort=e.target.value;renderGrid();}
+  if(e.target.name==='ship'){document.getElementById('sSum').innerHTML=sumBox(e.target.value);}
+});
+app.addEventListener('input',e=>{if(e.target.closest('#sSr')) doSearch(e.target.value); const f=e.target.closest('.s-field.bad'); if(f) f.classList.remove('bad');});
+app.addEventListener('submit',e=>{
+  e.preventDefault();const f=e.target;
+  if(f.dataset.form==='news'){const i=f.querySelector('input');if(!/^\S+@\S+\.\S+$/.test(i.value)){i.closest('.s-field').classList.add('bad');return;}i.value='';toast('عضویت شما در خبرنامه NEY ثبت شد');burst(f.querySelector('button'));return;}
+  if(f.dataset.form==='co'){
+    const g=n=>f.elements[n].value.trim(),bad=(n,c)=>{f.elements[n].closest('.s-field').classList.toggle('bad',!c);return c;};
+    const ph=toEn(g('phone')).replace(/\D/g,'');
+    const ok=[bad('name',g('name').length>=3),bad('phone',/^09\d{9}$/.test(ph)),bad('city',g('city').length>=2),bad('addr',g('addr').length>=10)].every(Boolean);
+    if(!ok){const b=f.querySelector('.s-field.bad input,.s-field.bad textarea');b&&b.focus();toast('لطفاً موارد مشخص‌شده را کامل کنید');return;}
+    const ship=f.elements.ship.value;
+    lastOrder={name:g('name'),code:'NEY-'+toFa(Math.floor(10000+Math.random()*89999)),total:sub()+shipCost(ship),ship};
+    cart=[];save();counts();location.hash='#done';
+  }
+});
+
+function openApp(){themeIc();if(!appOpen){appOpen=true;app.classList.add('open');JW.forEach(J=>J.open&&setOpen(J,false));}}
+function closeApp(){appOpen=false;app.classList.remove('open');closeCart();closeSearch();document.title='NEY | طلا و جواهر';}
+function route(){
+  const h=decodeURIComponent(location.hash.slice(1)),[a,b]=h.split('/');
+  if(!h||h==='home'){closeApp();return;}
+  if(!['shop','p','wish','checkout','done',...Object.keys(CAT)].includes(a)) return;
+  openApp();closeCart();closeSearch();
+  let nav='';
+  if(a==='shop'&&!b){renderHome();nav='shop';document.title='فروشگاه NEY | طلا و جواهر';}
+  else if(a==='shop'||CAT[a]){const c=b||a;renderList(c);nav=CAT[c]?c:'all';document.title=(CAT[c]||'همه محصولات')+' | NEY';}
+  else if(a==='p'){renderPDP(+b);const p=byId(+b);nav=p?p.cat:'';document.title=(p?p.name:'محصول')+' | NEY';}
+  else if(a==='wish'){renderWish();nav='wish';document.title='علاقه‌مندی‌ها | NEY';}
+  else if(a==='checkout'){renderCheckout();document.title='تکمیل خرید | NEY';}
+  else if(a==='done'){renderDone();document.title='سفارش ثبت شد | NEY';}
+  app.querySelectorAll('[data-nav]').forEach(x=>x.classList.toggle('on',x.dataset.nav===nav||(nav&&CAT[nav]&&x.dataset.nav==='all'&&x.closest('.s-tabs'))));
+  app.style.scrollBehavior='auto';app.scrollTop=0;app.style.scrollBehavior='';
+}
+addEventListener('hashchange',route);
+route();
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "NEY | طلا و جواهر دست‌ساز",
+  "description": "NEY — طلا و جواهر دست‌ساز؛ تجربه تعاملی جنگل کاغذی و فروشگاه آنلاین انگشتر، گردنبند، دستبند و گوشواره طلای ۱۸ عیار.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
